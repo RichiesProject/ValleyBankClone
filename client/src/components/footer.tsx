@@ -133,7 +133,7 @@ export default function Footer() {
                   FDIC
                 </div>
                 <p className="text-xs text-gray-300 text-center max-w-xs" data-testid="text-fdic-insured">
-                  FDIC Insured - Backed by the full faith and credit of the U.S. Government
+                  FDIC Insured - Backed by the full faith and credit of the<br />U.S. Government
                 </p>
               </div>
               <div className="flex items-center">
@@ -158,7 +158,7 @@ export default function Footer() {
           </div>
 
           {/* Legal disclaimer */}
-          <div className="mt-6 text-xs text-gray-400 space-y-1">
+          <div className="mt-6 text-xs text-gray-400">
             <p data-testid="text-legal-disclaimer">
               *Annual Percentage Yield (APY). Interest rates on deposits and products are subject to credit approval. Terms subject to change without notice.
             </p>
