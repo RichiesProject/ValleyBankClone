@@ -158,15 +158,32 @@ export default function Footer() {
           </div>
 
           {/* Legal disclaimer */}
-          <div className="mt-6 text-xs text-gray-400">
+          <div className="mt-6 text-xs text-gray-400 space-y-1">
             <p data-testid="text-legal-disclaimer">
-              *Annual Percentage Yield (APY). Interest rates on deposits and products are subject to credit approval. Terms subject to change without notice.
+              This is not a commitment to lend as products are subject to credit approval.
+            </p>
+            <p data-testid="text-terms">
+              Terms subject to change without notice.
             </p>
             <p data-testid="text-routing-number">
-              Routing Number: 123204859
+              Routing Number - 123206859
             </p>
             <p data-testid="text-copyright">
-              © Willamette Valley Bank NMLS# 731709. All rights reserved.
+              © Willamette Valley Bank NMLS# 713109. All rights reserved.
+            </p>
+            <div className="flex space-x-3 mt-2">
+              <a href="#" className="text-gray-400 hover:text-gray-300" data-testid="link-privacy-policy-bottom">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-gray-400 hover:text-gray-300" data-testid="link-disclosures-bottom">
+                Disclosures
+              </a>
+              <a href="#" className="text-gray-400 hover:text-gray-300" data-testid="link-accessibility">
+                Accessibility
+              </a>
+            </div>
+            <p data-testid="text-website-by">
+              Website by:
             </p>
           </div>
         </div>
