@@ -158,10 +158,9 @@ export default function Footer() {
           </div>
 
           {/* Legal disclaimer */}
-          <div className="mt-6 text-xs text-gray-400 space-y-2">
+          <div className="mt-6 text-xs text-gray-400 space-y-1">
             <p data-testid="text-legal-disclaimer">
-              *Annual Percentage Yield (APY). Interest rates on deposits and products are subject to credit approval.
-              Terms subject to change without notice.
+              *Annual Percentage Yield (APY). Interest rates on deposits and products are subject to credit approval. Terms subject to change without notice.
             </p>
             <p data-testid="text-routing-number">
               Routing Number: 123204859
