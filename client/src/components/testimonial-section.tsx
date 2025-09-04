@@ -20,7 +20,7 @@ export default function TestimonialSection() {
         
         <div className="flex flex-col items-center">
           <img 
-            src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
+            src="@assets/Screenshot 2025-09-04 at 7.25.42 PM_1757028371546.png" 
             alt="Ryan Dempster, President & CEO" 
             className="w-16 h-16 rounded-full object-cover mb-4"
             data-testid="img-ceo-profile"
