@@ -1,4 +1,5 @@
 import { Quote } from 'lucide-react';
+import ryanDempsterPhoto from '@assets/generated_images/Professional_CEO_headshot_portrait_5d03bf9d.png';
 
 export default function TestimonialSection() {
   return (
@@ -20,7 +21,7 @@ export default function TestimonialSection() {
         
         <div className="flex flex-col items-center">
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" 
+            src={ryanDempsterPhoto} 
             alt="Ryan Dempster, President & CEO" 
             className="w-16 h-16 rounded-full object-cover mb-4"
             data-testid="img-ceo-profile"
