@@ -1,5 +1,4 @@
 import ScamAlertBanner from "@/components/scam-alert-banner";
-import AnniversaryBanner from "@/components/anniversary-banner";
 import NavigationHeader from "@/components/navigation-header";
 import MobileAppSection from "@/components/mobile-app-section";
 import HeroSection from "@/components/hero-section";
@@ -13,13 +12,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <ScamAlertBanner />
-      <AnniversaryBanner />
       <NavigationHeader />
-      <MobileAppSection />
       <HeroSection />
       <HomeLoansSection />
       <FeaturesSection />
       <CareersSection />
+      <MobileAppSection />
       <Footer />
       <ChatWidget />
     </div>
