@@ -4,7 +4,8 @@ export default function NavigationHeader() {
   return (
     <header className="bg-slate-800 text-white py-4" data-testid="navigation-header">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center">
+          {/* Left side - Logo and Badge */}
           <div className="flex items-center space-x-6">
             {/* Bank Logo and Name */}
             <div className="flex items-center space-x-3">
@@ -39,7 +40,9 @@ export default function NavigationHeader() {
               </div>
             </div>
           </div>
-          <nav className="flex space-x-12 text-lg" data-testid="nav-primary">
+          
+          {/* Center - Main Navigation */}
+          <nav className="flex space-x-8 text-lg ml-16" data-testid="nav-primary">
             <div className="relative group">
               <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors" data-testid="button-business">
                 <span>Business</span>
@@ -119,10 +122,10 @@ export default function NavigationHeader() {
             </a>
           </nav>
           
-          {/* Right side - Login and Open Account */}
-          <div className="flex items-center space-x-4">
+          {/* Right side - Login and Open Account with lots of space */}
+          <div className="flex items-center space-x-3 ml-auto">
             <div className="relative group">
-              <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors" data-testid="button-login">
+              <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors text-base" data-testid="button-login">
                 <span>Login</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -136,7 +139,7 @@ export default function NavigationHeader() {
               </div>
             </div>
             <button 
-              className="bg-white text-slate-800 px-6 py-2 rounded font-medium hover:bg-gray-100 transition-all duration-300"
+              className="bg-white text-slate-800 px-4 py-1.5 rounded text-sm font-medium hover:bg-gray-100 transition-all duration-300"
               data-testid="button-open-account"
             >
               Open Account
