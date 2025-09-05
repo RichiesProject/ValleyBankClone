@@ -26,10 +26,12 @@ export default function CommunityDnaSection() {
           data-testid="bank-icon"
         >
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-lg">
-            <svg className="w-8 h-8 text-slate-800" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-              <path d="M9 12h6v2H9z"/>
-              <path d="M9 8h6v2H9z"/>
+            {/* Willamette Valley Bank Logo - Mountain Design */}
+            <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="24" height="24" rx="4" fill="#2c3e50"/>
+              <path d="M4 12c0-1.5 1-3 2.5-4.5C8 6 10 5 12 5s4 1 5.5 2.5C19 9 20 10.5 20 12" stroke="white" strokeWidth="1.5" fill="none"/>
+              <path d="M4 16c2-1 4-1.5 6-1s4 1 6 0.5c2-0.5 4-1.5 4-2.5" stroke="white" strokeWidth="1.5" fill="none"/>
+              <path d="M8 18c1.5-0.5 3-0.5 4 0s3 0.5 4.5 0" stroke="white" strokeWidth="1.2" fill="none"/>
             </svg>
           </div>
         </motion.div>
