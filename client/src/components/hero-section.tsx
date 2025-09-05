@@ -4,7 +4,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Title and Buttons */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-6xl font-light leading-tight mb-8" data-testid="text-hero-title">
+          <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8" data-testid="text-hero-title">
             Where Local Means Everything
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -24,9 +24,9 @@ export default function HeroSection() {
         </div>
 
         {/* Large Image Mosaic Layout */}
-        <div className="relative h-80 lg:h-96">
+        <div className="relative h-[500px] lg:h-[600px]">
           {/* Far left - Winter scene */}
-          <div className="absolute left-0 top-8 w-16 h-64 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
+          <div className="absolute left-0 top-16 w-24 h-80 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
             <img 
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
               alt="Winter outdoor scene" 
@@ -36,7 +36,7 @@ export default function HeroSection() {
           </div>
 
           {/* Left - Beach scene */}
-          <div className="absolute left-20 top-0 w-48 h-32 rounded-lg overflow-hidden shadow-lg z-20">
+          <div className="absolute left-32 top-0 w-64 h-48 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4682ce3e6238b171d64_AdobeStock_555122175.webp" 
               alt="Person running on beach with dog" 
@@ -46,7 +46,7 @@ export default function HeroSection() {
           </div>
 
           {/* Bottom left - Family with child */}
-          <div className="absolute left-20 bottom-8 w-48 h-48 rounded-lg overflow-hidden shadow-lg z-20">
+          <div className="absolute left-32 bottom-16 w-64 h-64 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
               alt="Family with child" 
@@ -56,7 +56,7 @@ export default function HeroSection() {
           </div>
 
           {/* Large center mountain scene */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-80 h-80 rounded-lg overflow-hidden shadow-xl z-30">
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-8 w-96 h-96 rounded-lg overflow-hidden shadow-xl z-30">
             <img 
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
               alt="Mountain landscape with hiker" 
@@ -66,7 +66,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right top - Couple house scene */}
-          <div className="absolute right-20 top-0 w-48 h-48 rounded-lg overflow-hidden shadow-lg z-20">
+          <div className="absolute right-32 top-0 w-64 h-64 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b9d07c37f26e549c64b2aa_66b64d085e84150bd3a56016_IMG_4636.jpg" 
               alt="Couple at their home" 
@@ -76,7 +76,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right bottom - Kitchen scene */}
-          <div className="absolute right-20 bottom-8 w-48 h-32 rounded-lg overflow-hidden shadow-lg z-20">
+          <div className="absolute right-32 bottom-16 w-64 h-48 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
               alt="Kitchen family scene" 
@@ -86,7 +86,7 @@ export default function HeroSection() {
           </div>
 
           {/* Far right - Nature scene */}
-          <div className="absolute right-0 top-8 w-16 h-64 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
+          <div className="absolute right-0 top-16 w-24 h-80 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
             <img 
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4682ce3e6238b171d64_AdobeStock_555122175.webp" 
               alt="Nature outdoor scene" 
