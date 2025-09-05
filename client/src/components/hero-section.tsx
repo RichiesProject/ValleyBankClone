@@ -1,22 +1,22 @@
 export default function HeroSection() {
   return (
-    <section className="hero-gradient text-white py-20 lg:py-32 relative overflow-hidden" data-testid="hero-section">
+    <section className="bg-slate-800 text-white py-24 lg:py-32 relative overflow-hidden" data-testid="hero-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Main content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl lg:text-6xl font-light leading-tight mb-8" data-testid="text-hero-title">
+            <h1 className="text-4xl lg:text-6xl font-light leading-tight mb-12" data-testid="text-hero-title">
               Where Local Means Everything
             </h1>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button 
-                className="bg-white text-primary px-8 py-3 rounded font-medium hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:-translate-y-1 gentle-float"
+                className="bg-white text-slate-800 px-8 py-3 rounded font-medium hover:bg-gray-100 transition-all duration-300"
                 data-testid="button-community-banking"
               >
                 Community Banking
               </button>
               <button 
-                className="border-2 border-white text-white px-8 py-3 rounded font-medium hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:-translate-y-1 gentle-float"
+                className="bg-slate-700 text-white px-8 py-3 rounded font-medium hover:bg-slate-600 transition-all duration-300"
                 data-testid="button-home-loan-journeys"
               >
                 Home Loan Journeys
