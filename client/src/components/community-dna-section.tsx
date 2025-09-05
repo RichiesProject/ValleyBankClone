@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import ryanDempsterImage from "@assets/Screenshot 2025-09-05 at 7.17.18 AM_1757071046924.png";
 
 export default function CommunityDnaSection() {
   const ref = useRef(null);
@@ -66,7 +67,7 @@ export default function CommunityDnaSection() {
           data-testid="ceo-profile"
         >
           <img 
-            src="/Screenshot 2025-09-04 at 7.25.42 PM_1757069873705.png"
+            src={ryanDempsterImage}
             alt="Ryan Dempster, President and CEO"
             className="w-16 h-16 rounded-full object-cover border-2 border-white/20"
           />
