@@ -65,9 +65,11 @@ export default function CommunityDnaSection() {
           className="flex items-center justify-center space-x-4"
           data-testid="ceo-profile"
         >
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-            <span className="text-white font-bold text-xl">RD</span>
-          </div>
+          <img 
+            src="/Screenshot 2025-09-04 at 7.25.42 PM_1757069873705.png"
+            alt="Ryan Dempster, President and CEO"
+            className="w-16 h-16 rounded-full object-cover border-2 border-white/20"
+          />
           <div className="text-left">
             <h3 className="text-white font-semibold text-lg" data-testid="text-ceo-name">
               Ryan Dempster
