@@ -1,4 +1,5 @@
 import { Quote } from 'lucide-react';
+import ryanImage from '@assets/Screenshot 2025-09-04 at 7.25.42 PM_1757030097098.png';
 
 export default function TestimonialSection() {
   return (
@@ -20,7 +21,7 @@ export default function TestimonialSection() {
         
         <div className="flex flex-col items-center">
           <img 
-            src="/attached_assets/Screenshot 2025-09-04 at 7.25.42 PM_1757030097098.png"
+            src={ryanImage}
             alt="Ryan Dempster, President & CEO" 
             className="w-16 h-16 rounded-full object-cover mb-4"
             data-testid="img-ceo-profile"
