@@ -18,7 +18,7 @@ export default function TestimonialSection() {
                   <img 
                     src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b67b49762b6b0f3ee71441_AppStoreBtn.png" 
                     alt="Download From App Store" 
-                    className="h-12 w-auto"
+                    className="h-16 w-auto"
                     data-testid="img-app-store-button"
                   />
                 </a>
@@ -30,7 +30,7 @@ export default function TestimonialSection() {
                   <img 
                     src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b67b498ebf423a6af7fbc6_GooglePlayBtn.png" 
                     alt="Download From Google Play" 
-                    className="h-12 w-auto"
+                    className="h-16 w-auto"
                     data-testid="img-google-play-button"
                   />
                 </a>
