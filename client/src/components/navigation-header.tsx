@@ -139,7 +139,7 @@ export default function NavigationHeader() {
               </div>
             </div>
             <button 
-              className="bg-white text-slate-800 px-4 py-1.5 rounded text-sm font-medium hover:bg-gray-100 transition-all duration-300"
+              className="bg-white text-slate-800 px-4 py-1.5 rounded text-sm font-medium hover:bg-gray-100 transition-all duration-300 animate-bounce hover:animate-none"
               data-testid="button-open-account"
             >
               Open Account
