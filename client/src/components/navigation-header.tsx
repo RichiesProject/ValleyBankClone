@@ -118,6 +118,30 @@ export default function NavigationHeader() {
               Locations
             </a>
           </nav>
+          
+          {/* Right side - Login and Open Account */}
+          <div className="flex items-center space-x-4">
+            <div className="relative group">
+              <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors" data-testid="button-login">
+                <span>Login</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              {/* Login dropdown menu */}
+              <div className="absolute top-full right-0 mt-2 w-56 bg-white text-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 transition-colors" data-testid="link-online-banking">Online Banking</a>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 transition-colors" data-testid="link-mobile-app">Mobile App</a>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 transition-colors" data-testid="link-business-online">Business Online</a>
+                </div>
+              </div>
+            </div>
+            <button 
+              className="bg-white text-slate-800 px-6 py-2 rounded font-medium hover:bg-gray-100 transition-all duration-300"
+              data-testid="button-open-account"
+            >
+              Open Account
+            </button>
+          </div>
         </div>
       </div>
     </header>
