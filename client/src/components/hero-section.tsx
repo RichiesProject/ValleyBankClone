@@ -24,10 +24,20 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right side - Image collage */}
-          <div className="relative grid grid-cols-2 gap-4 h-96">
+          {/* Right side - Complex Image collage */}
+          <div className="relative h-96 lg:h-[500px]">
+            {/* Large center mountain scene */}
+            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-64 h-72 rounded-lg overflow-hidden shadow-lg z-10">
+              <img 
+                src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
+                alt="Mountain landscape with hiker" 
+                className="w-full h-full object-cover"
+                data-testid="img-mountain-hiker"
+              />
+            </div>
+
             {/* Top left - Beach scene */}
-            <div className="rounded-lg overflow-hidden">
+            <div className="absolute top-0 left-0 w-32 h-28 rounded-lg overflow-hidden shadow-md">
               <img 
                 src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4682ce3e6238b171d64_AdobeStock_555122175.webp" 
                 alt="Person running on beach with dog" 
@@ -36,52 +46,53 @@ export default function HeroSection() {
               />
             </div>
 
-            {/* Top right - Mountain scene */}
-            <div className="rounded-lg overflow-hidden">
-              <img 
-                src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
-                alt="Mountain landscape with trees" 
-                className="w-full h-full object-cover"
-                data-testid="img-mountain-scene"
-              />
-            </div>
-
-            {/* Bottom left - Couple scene */}
-            <div className="rounded-lg overflow-hidden">
-              <img 
-                src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
-                alt="Happy couple together" 
-                className="w-full h-full object-cover"
-                data-testid="img-couple-scene"
-              />
-            </div>
-
-            {/* Bottom right - Home scene */}
-            <div className="rounded-lg overflow-hidden">
+            {/* Top right - Couple house scene */}
+            <div className="absolute top-0 right-0 w-36 h-32 rounded-lg overflow-hidden shadow-md">
               <img 
                 src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b9d07c37f26e549c64b2aa_66b64d085e84150bd3a56016_IMG_4636.jpg" 
-                alt="Beautiful home exterior" 
+                alt="Couple at their home" 
                 className="w-full h-full object-cover"
-                data-testid="img-home-scene"
+                data-testid="img-couple-house"
               />
             </div>
 
-            {/* Additional floating images for more dynamic layout */}
-            <div className="absolute -left-8 top-8 w-24 h-24 rounded-lg overflow-hidden opacity-80">
+            {/* Bottom left - Family with child */}
+            <div className="absolute bottom-4 left-0 w-36 h-40 rounded-lg overflow-hidden shadow-md">
               <img 
                 src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
-                alt="Lifestyle image" 
+                alt="Family with child" 
                 className="w-full h-full object-cover"
-                data-testid="img-lifestyle-1"
+                data-testid="img-family-child"
               />
             </div>
 
-            <div className="absolute -right-8 bottom-8 w-32 h-20 rounded-lg overflow-hidden opacity-80">
+            {/* Bottom right - Kitchen scene */}
+            <div className="absolute bottom-0 right-0 w-32 h-36 rounded-lg overflow-hidden shadow-md">
+              <img 
+                src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
+                alt="Kitchen family scene" 
+                className="w-full h-full object-cover"
+                data-testid="img-kitchen-scene"
+              />
+            </div>
+
+            {/* Far left - Winter scene */}
+            <div className="absolute left-[-40px] top-16 w-20 h-32 rounded-lg overflow-hidden shadow-sm opacity-90">
+              <img 
+                src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
+                alt="Winter outdoor scene" 
+                className="w-full h-full object-cover"
+                data-testid="img-winter-scene"
+              />
+            </div>
+
+            {/* Far right - Nature scene */}
+            <div className="absolute right-[-40px] top-20 w-24 h-28 rounded-lg overflow-hidden shadow-sm opacity-90">
               <img 
                 src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4682ce3e6238b171d64_AdobeStock_555122175.webp" 
-                alt="Lifestyle image" 
+                alt="Nature outdoor scene" 
                 className="w-full h-full object-cover"
-                data-testid="img-lifestyle-2"
+                data-testid="img-nature-scene"
               />
             </div>
           </div>
