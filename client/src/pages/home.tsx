@@ -1,5 +1,4 @@
 import NavigationHeader from "@/components/navigation-header";
-import MobileAppSection from "@/components/mobile-app-section";
 import HeroSection from "@/components/hero-section";
 import TestimonialSection from "@/components/testimonial-section";
 import VideoSection from "@/components/video-section";
@@ -19,7 +18,6 @@ export default function Home() {
       <HomeLoansSection />
       <FeaturesSection />
       <CareersSection />
-      <MobileAppSection />
       <Footer />
       <ChatWidget />
     </div>

@@ -8,6 +8,34 @@ export default function TestimonialSection() {
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center lg:text-left mb-6" data-testid="text-mobile-app-header">
               Bank on the go with our Mobile App!
             </h2>
+            <div className="flex justify-center lg:justify-start mb-6">
+              <div className="flex space-x-4">
+                <a 
+                  href="https://itunes.apple.com/us/app/willamette-valley-bank-mobile/id1133122347?mt=8" 
+                  className="float-on-hover"
+                  data-testid="link-app-store"
+                >
+                  <img 
+                    src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b67b49762b6b0f3ee71441_AppStoreBtn.png" 
+                    alt="Download From App Store" 
+                    className="h-12 w-auto"
+                    data-testid="img-app-store-button"
+                  />
+                </a>
+                <a 
+                  href="https://play.google.com/store/apps/details?id=com.willamettevalleybank.mobile&hl=en" 
+                  className="float-on-hover"
+                  data-testid="link-google-play"
+                >
+                  <img 
+                    src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b67b498ebf423a6af7fbc6_GooglePlayBtn.png" 
+                    alt="Download From Google Play" 
+                    className="h-12 w-auto"
+                    data-testid="img-google-play-button"
+                  />
+                </a>
+              </div>
+            </div>
             <div className="flex justify-center lg:justify-start">
               <img 
                 src="/bank-award-sign.png"
