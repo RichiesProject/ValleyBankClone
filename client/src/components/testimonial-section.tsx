@@ -6,7 +6,7 @@ export default function TestimonialSection() {
           {/* Left side - Award image */}
           <div className="flex justify-center lg:justify-start">
             <img 
-              src="/attached_assets/Screenshot 2025-09-04 at 8.51.42 PM_1757033510462.png"
+              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=800&fit=crop&crop=center"
               alt="No. 1 Community Bank Award Sign" 
               className="w-full max-w-2xl h-auto rounded-xl shadow-2xl"
               data-testid="img-award-sign"
