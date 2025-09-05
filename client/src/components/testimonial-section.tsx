@@ -3,8 +3,11 @@ export default function TestimonialSection() {
     <section className="bg-white py-16 lg:py-24" data-testid="testimonial-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left side - Logos, Header and Award sign photo */}
+          {/* Left side - Header, Logos, and Award sign photo */}
           <div className="flex flex-col justify-center lg:justify-start">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center lg:text-left mb-6" data-testid="text-mobile-app-header">
+              Bank on the go with our Mobile App!
+            </h2>
             <div className="flex justify-center lg:justify-start mb-6">
               <div className="flex space-x-4">
                 <a 
@@ -33,9 +36,6 @@ export default function TestimonialSection() {
                 </a>
               </div>
             </div>
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center lg:text-left mb-6" data-testid="text-mobile-app-header">
-              Bank on the go with our Mobile App!
-            </h2>
             <div className="flex justify-center lg:justify-start">
               <img 
                 src="/bank-award-sign.png"
