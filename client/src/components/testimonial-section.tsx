@@ -5,12 +5,51 @@ export default function TestimonialSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Award sign photo */}
           <div className="flex justify-center lg:justify-start">
-            <img 
-              src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=600&fit=crop&crop=center"
-              alt="No. 1 Community Bank Award Sign - Willamette Valley Bank" 
-              className="w-full max-w-2xl h-auto rounded-xl shadow-2xl"
-              data-testid="img-award-sign"
-            />
+            <div className="relative max-w-2xl w-full">
+              {/* Award sign - recreated exactly from your image */}
+              <div className="relative bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 rounded-xl shadow-2xl overflow-hidden">
+                {/* Building background elements */}
+                <div className="absolute inset-0 bg-gradient-to-r from-stone-200 to-amber-100 opacity-60"></div>
+                <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-b from-stone-400 to-stone-600 opacity-30"></div>
+                
+                {/* Award sign circle positioned as in your photo */}
+                <div className="relative z-10 flex items-center justify-center py-16 px-8">
+                  <div className="bg-white rounded-full w-80 h-80 shadow-2xl border-4 border-gray-900 flex flex-col items-center justify-center p-6">
+                    <div className="text-center space-y-2">
+                      {/* N°1 */}
+                      <div className="text-5xl font-bold text-gray-900 mb-2">N°1</div>
+                      
+                      {/* COMMUNITY BANK */}
+                      <div className="space-y-1 mb-2">
+                        <div className="text-lg font-bold text-gray-900 uppercase tracking-wider">COMMUNITY</div>
+                        <div className="text-lg font-bold text-gray-900 uppercase tracking-wider">BANK</div>
+                      </div>
+                      
+                      {/* IN THE NATION */}
+                      <div className="text-xs text-gray-700 uppercase tracking-wide mb-3">IN THE NATION</div>
+                      
+                      {/* Magazine banner */}
+                      <div className="bg-gray-900 text-white px-3 py-1 text-xs font-semibold uppercase tracking-wide mb-3">
+                        AMERICAN BANKER MAGAZINE 2019, 2020 & 2021
+                      </div>
+                      
+                      {/* Willamette Valley Bank logo and name */}
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
+                          <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                            <div className="w-4 h-2 bg-gray-900 rounded-full"></div>
+                          </div>
+                        </div>
+                        <div className="text-left">
+                          <div className="text-xs font-bold text-gray-900">Willamette</div>
+                          <div className="text-xs font-bold text-gray-900">Valley Bank</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right side - Award content */}
