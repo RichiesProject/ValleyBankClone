@@ -1,15 +1,33 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Building2 } from 'lucide-react';
 
 export default function NavigationHeader() {
   return (
     <header className="bg-slate-800 text-white py-4" data-testid="navigation-header">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
-            {/* Logo - 25 Years of Service */}
-            <div className="text-white font-bold text-2xl tracking-wide" data-testid="logo-25-years">
+          <div className="flex items-center space-x-6">
+            {/* Bank Logo and Name */}
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+                <Building2 className="w-7 h-7 text-slate-800" />
+              </div>
+              <div>
+                <div className="text-xl font-bold" data-testid="text-bank-name">
+                  Willamette
+                </div>
+                <div className="text-xl font-bold -mt-1" data-testid="text-bank-name-2">
+                  Valley Bank
+                </div>
+              </div>
+            </div>
+            
+            {/* Vertical divider */}
+            <div className="h-12 w-px bg-gray-400"></div>
+            
+            {/* 25 Years of Service Badge */}
+            <div className="text-white font-bold text-2xl tracking-wide flex items-center" data-testid="logo-25-years">
               <span className="text-4xl">25</span>
-              <div className="text-sm leading-tight ml-2 inline-block">
+              <div className="text-sm leading-tight ml-2">
                 YEARS <span className="italic">of</span><br />
                 SERVICE
               </div>
