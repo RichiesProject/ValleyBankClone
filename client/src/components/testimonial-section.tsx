@@ -1,5 +1,5 @@
 import { Quote } from 'lucide-react';
-import ryanImage from '@assets/Screenshot 2025-09-04 at 7.25.42 PM_1757030097098.png';
+import ryanImage from '@assets/generated_images/Professional_CEO_headshot_portrait_0ec2e71c.png';
 
 export default function TestimonialSection() {
   return (
