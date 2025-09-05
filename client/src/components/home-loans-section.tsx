@@ -18,7 +18,7 @@ export default function HomeLoansSection() {
               journey, and answer any questions you have along the way.
             </p>
             <button 
-              className="bg-white text-slate-800 px-6 py-3 rounded font-medium hover:bg-gray-100 transition-all duration-300 inline-flex items-center space-x-2"
+              className="bg-white text-slate-800 px-6 py-3 rounded font-medium hover:bg-gray-100 hover:-translate-y-1 transition-all duration-300 inline-flex items-center space-x-2"
               data-testid="button-home-loans-learn-more"
             >
               <span>Learn More</span>
