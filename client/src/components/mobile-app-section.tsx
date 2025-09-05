@@ -8,7 +8,7 @@ export default function MobileAppSection() {
         <div className="flex justify-center space-x-4">
           <a 
             href="https://itunes.apple.com/us/app/willamette-valley-bank-mobile/id1133122347?mt=8" 
-            className="hover-lift"
+            className="float-on-hover"
             data-testid="link-app-store"
           >
             <img 
@@ -20,7 +20,7 @@ export default function MobileAppSection() {
           </a>
           <a 
             href="https://play.google.com/store/apps/details?id=com.willamettevalleybank.mobile&hl=en" 
-            className="hover-lift"
+            className="float-on-hover"
             data-testid="link-google-play"
           >
             <img 

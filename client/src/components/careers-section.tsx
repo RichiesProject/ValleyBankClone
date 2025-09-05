@@ -13,7 +13,7 @@ export default function CareersSection() {
             Career opportunities at Willamette Valley Bank
           </p>
           <button 
-            className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors hover-lift"
+            className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:-translate-y-2 float-on-hover"
             data-testid="button-browse-careers"
           >
             Browse Careers

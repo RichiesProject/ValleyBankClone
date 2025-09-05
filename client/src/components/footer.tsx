@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Building2 } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">WV</span>
+                <Building2 className="w-5 h-5 text-primary" />
               </div>
               <span className="text-lg font-semibold" data-testid="text-bank-name-footer">
                 Willamette Valley Bank
@@ -29,16 +29,16 @@ export default function Footer() {
             </div>
             {/* Social Media Icons */}
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-gray-300 hover:text-white" data-testid="link-facebook">
+              <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white" data-testid="link-instagram">
+              <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white" data-testid="link-linkedin">
+              <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-linkedin">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white" data-testid="link-google">
+              <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-google">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -48,25 +48,25 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold tracking-wide" data-testid="text-about-title">ABOUT</h3>
             <div className="space-y-2">
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-community">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-community">
                 Community
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-about-us">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-about-us">
                 About Us
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-news">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-news">
                 News
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-education">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-education">
                 Education
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-faqs">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-faqs">
                 FAQs
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-support">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-support">
                 Support
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-careers-footer">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-careers-footer">
                 Careers
               </a>
             </div>
@@ -76,22 +76,22 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold tracking-wide" data-testid="text-personal-title">PERSONAL</h3>
             <div className="space-y-2">
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-personal-checking">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-personal-checking">
                 Personal Checking
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-personal-savings">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-personal-savings">
                 Personal Savings
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-personal-banking">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-personal-banking">
                 Personal Banking
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-personal-credit-cards">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-personal-credit-cards">
                 Personal Credit Cards
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-home-loans-footer">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-home-loans-footer">
                 Home Loans
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-home-loan-centers">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-home-loan-centers">
                 Home Loan Centers
               </a>
             </div>
@@ -101,22 +101,22 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold tracking-wide" data-testid="text-business-title">BUSINESS</h3>
             <div className="space-y-2">
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-business-checking">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-checking">
                 Business Checking
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-business-savings">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-savings">
                 Business Savings
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-business-credit-cards">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-credit-cards">
                 Business Credit Cards
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-business-loans">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-loans">
                 Business Loans
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-commercial-lenders">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-commercial-lenders">
                 Commercial Lenders
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm" data-testid="link-commercial-lender-centers">
+              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-commercial-lender-centers">
                 Commercial Lender Centers
               </a>
             </div>
@@ -148,10 +148,10 @@ export default function Footer() {
 
             {/* Right side links */}
             <div className="flex space-x-4 text-xs">
-              <a href="#" className="text-gray-300 hover:text-white" data-testid="link-privacy-policy">
+              <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-privacy-policy">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-300 hover:text-white" data-testid="link-disclosures">
+              <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-disclosures">
                 Disclosures
               </a>
             </div>
@@ -172,13 +172,13 @@ export default function Footer() {
               © Willamette Valley Bank NMLS# 713109. All rights reserved.
             </p>
             <div className="flex space-x-3 mt-2">
-              <a href="#" className="text-gray-400 hover:text-gray-300" data-testid="link-privacy-policy-bottom">
+              <a href="#" className="text-gray-400 hover:text-gray-300 gentle-float" data-testid="link-privacy-policy-bottom">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-300" data-testid="link-disclosures-bottom">
+              <a href="#" className="text-gray-400 hover:text-gray-300 gentle-float" data-testid="link-disclosures-bottom">
                 Disclosures
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-300" data-testid="link-accessibility">
+              <a href="#" className="text-gray-400 hover:text-gray-300 gentle-float" data-testid="link-accessibility">
                 Accessibility
               </a>
             </div>

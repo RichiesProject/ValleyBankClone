@@ -24,31 +24,31 @@ export default function NavigationHeader() {
             </div>
             <nav className="hidden lg:flex space-x-6" data-testid="nav-primary">
               <div className="relative group">
-                <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors" data-testid="button-business">
+                <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors gentle-float" data-testid="button-business">
                   <span>Business</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
               </div>
               <div className="relative group">
-                <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors" data-testid="button-personal">
+                <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors gentle-float" data-testid="button-personal">
                   <span>Personal</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
               </div>
               <div className="relative group">
-                <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors" data-testid="button-about">
+                <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors gentle-float" data-testid="button-about">
                   <span>About</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
               </div>
-              <a href="#" className="hover:text-gray-300 transition-colors" data-testid="link-locations">
+              <a href="#" className="hover:text-gray-300 transition-colors gentle-float" data-testid="link-locations">
                 Locations
               </a>
             </nav>
           </div>
           <div className="flex items-center space-x-4">
             <div className="relative group">
-              <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors" data-testid="button-login">
+              <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors gentle-float" data-testid="button-login">
                 <span>Login</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
