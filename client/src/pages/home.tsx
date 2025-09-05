@@ -1,6 +1,7 @@
 import NavigationHeader from "@/components/navigation-header";
 import HeroSection from "@/components/hero-section";
 import TestimonialSection from "@/components/testimonial-section";
+import CommunityDnaSection from "@/components/community-dna-section";
 import VideoSection from "@/components/video-section";
 import HomeLoansSection from "@/components/home-loans-section";
 import FeaturesSection from "@/components/features-section";
@@ -14,6 +15,7 @@ export default function Home() {
       <NavigationHeader />
       <HeroSection />
       <TestimonialSection />
+      <CommunityDnaSection />
       <VideoSection />
       <HomeLoansSection />
       <FeaturesSection />

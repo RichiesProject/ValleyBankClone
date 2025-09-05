@@ -169,3 +169,82 @@
 .hero-gradient {
   background: linear-gradient(135deg, #0f4a5c 0%, #1a5f73 50%, #2d7489 100%);
 }
+
+/* Smooth scrolling and section transitions */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Seamless section transitions and parallax effects */
+section {
+  position: relative;
+  z-index: 10;
+}
+
+/* Scroll-triggered animations base */
+.animate-on-scroll {
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Parallax background effects */
+.parallax-bg {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Section overlay transitions for seamless blending */
+.section-overlay {
+  position: relative;
+}
+
+.section-overlay::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.02));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Smooth text reveal animations */
+.text-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.text-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Story-like continuous scrolling effects */
+.story-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-section::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
