@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import ryanDempsterImage from "@assets/Screenshot 2025-09-05 at 7.17.18 AM_1757071046924.png";
+import ryanDempsterImage from "@assets/generated_images/Professional_CEO_headshot_portrait_5d03bf9d.png";
 
 export default function CommunityDnaSection() {
   const ref = useRef(null);
