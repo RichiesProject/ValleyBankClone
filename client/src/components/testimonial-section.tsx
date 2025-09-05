@@ -3,11 +3,8 @@ export default function TestimonialSection() {
     <section className="bg-white py-16 lg:py-24" data-testid="testimonial-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left side - Header and Award sign photo */}
+          {/* Left side - Logos, Header and Award sign photo */}
           <div className="flex flex-col justify-center lg:justify-start">
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center lg:text-left mb-6" data-testid="text-mobile-app-header">
-              Bank on the go with our Mobile App!
-            </h2>
             <div className="flex justify-center lg:justify-start mb-6">
               <div className="flex space-x-4">
                 <a 
@@ -18,7 +15,7 @@ export default function TestimonialSection() {
                   <img 
                     src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b67b49762b6b0f3ee71441_AppStoreBtn.png" 
                     alt="Download From App Store" 
-                    className="h-12 w-auto"
+                    className="h-16 w-auto"
                     data-testid="img-app-store-button"
                   />
                 </a>
@@ -30,12 +27,15 @@ export default function TestimonialSection() {
                   <img 
                     src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b67b498ebf423a6af7fbc6_GooglePlayBtn.png" 
                     alt="Download From Google Play" 
-                    className="h-12 w-auto"
+                    className="h-16 w-auto"
                     data-testid="img-google-play-button"
                   />
                 </a>
               </div>
             </div>
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center lg:text-left mb-6" data-testid="text-mobile-app-header">
+              Bank on the go with our Mobile App!
+            </h2>
             <div className="flex justify-center lg:justify-start">
               <img 
                 src="/bank-award-sign.png"
