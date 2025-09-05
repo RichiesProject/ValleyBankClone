@@ -1,4 +1,4 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Building2 } from 'lucide-react';
 
 export default function NavigationHeader() {
   return (
@@ -8,7 +8,7 @@ export default function NavigationHeader() {
           <div className="flex items-center space-x-8">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">WV</span>
+                <Building2 className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <div className="text-lg font-bold" data-testid="text-bank-name">
@@ -54,7 +54,7 @@ export default function NavigationHeader() {
               </button>
             </div>
             <button 
-              className="bg-white text-primary px-4 py-2 rounded font-medium hover:bg-gray-100 transition-colors"
+              className="bg-white text-primary px-4 py-2 rounded font-medium hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:-translate-y-1"
               data-testid="button-open-account"
             >
               Open Account

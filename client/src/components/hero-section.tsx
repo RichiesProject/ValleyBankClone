@@ -10,13 +10,13 @@ export default function HeroSection() {
             </h1>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button 
-                className="bg-white text-primary px-8 py-3 rounded font-medium hover:bg-gray-100 transition-colors"
+                className="bg-white text-primary px-8 py-3 rounded font-medium hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:-translate-y-1 gentle-float"
                 data-testid="button-community-banking"
               >
                 Community Banking
               </button>
               <button 
-                className="border-2 border-white text-white px-8 py-3 rounded font-medium hover:bg-white hover:text-primary transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded font-medium hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:-translate-y-1 gentle-float"
                 data-testid="button-home-loan-journeys"
               >
                 Home Loan Journeys

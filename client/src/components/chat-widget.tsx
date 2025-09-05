@@ -13,7 +13,7 @@ export default function ChatWidget() {
         
         {/* Dark LIVE CHAT button */}
         <button 
-          className="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl font-semibold text-sm"
+          className="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl font-semibold text-sm transform hover:scale-110 hover:-translate-y-2 hover:rotate-1"
           data-testid="button-live-chat"
         >
           LIVE CHAT
