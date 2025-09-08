@@ -178,6 +178,68 @@ export async function seedDatabase() {
       await storage.createTransaction(tx);
     }
 
+    // Create sample transactions for business accounts
+    const businessTransactions = [
+      {
+        accountId: businessCheckingAccount.id,
+        type: "credit",
+        amount: "15750.00",
+        description: "Client Payment - Invoice #1023",
+        merchant: "ABC Corp Solutions",
+        category: "Revenue",
+        status: "completed",
+      },
+      {
+        accountId: businessCheckingAccount.id,
+        type: "debit",
+        amount: "3240.50",
+        description: "Office Supplies & Equipment",
+        merchant: "Business Depot",
+        category: "Office Expenses",
+        status: "completed",
+      },
+      {
+        accountId: businessCheckingAccount.id,
+        type: "debit",
+        amount: "2850.00",
+        description: "Monthly Payroll",
+        merchant: "Payroll Processing Co",
+        category: "Payroll",
+        status: "completed",
+      },
+      {
+        accountId: businessSavingsAccount.id,
+        type: "credit",
+        amount: "5000.00",
+        description: "Transfer from Checking",
+        merchant: "Internal Transfer",
+        category: "Transfer",
+        status: "completed",
+      },
+      {
+        accountId: businessCreditAccount.id,
+        type: "debit",
+        amount: "1895.00",
+        description: "Marketing Campaign",
+        merchant: "Digital Marketing LLC",
+        category: "Marketing",
+        status: "completed",
+      },
+      {
+        accountId: businessCreditAccount.id,
+        type: "debit",
+        amount: "780.50",
+        description: "Business Travel",
+        merchant: "Corporate Travel Agency",
+        category: "Travel",
+        status: "completed",
+      },
+    ];
+
+    for (const tx of businessTransactions) {
+      await storage.createTransaction(tx);
+    }
+
     console.log("Created sample transactions");
     console.log("Database seeded successfully!");
   } catch (error) {

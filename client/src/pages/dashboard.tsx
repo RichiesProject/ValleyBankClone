@@ -310,36 +310,73 @@ export default function Dashboard() {
 
         {/* Recent Transactions */}
         <Card className="mt-6">
-          <CardHeader>
-            <CardTitle>Recent Transactions</CardTitle>
+          <CardHeader className="bg-gradient-to-r from-gray-50 to-slate-50">
+            <CardTitle className="flex items-center justify-between">
+              <span className="text-slate-800">Recent Transactions</span>
+              <Badge variant="outline" className="bg-white">
+                {transactions.length} Total
+              </Badge>
+            </CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              {transactions.slice(0, 10).map((transaction) => (
-                <div key={transaction.id} className="flex items-center justify-between p-3 border rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    {getTransactionIcon(transaction.type)}
+          <CardContent className="p-0">
+            <div className="divide-y divide-gray-100">
+              {transactions.slice(0, 8).map((transaction, index) => (
+                <div 
+                  key={transaction.id} 
+                  className={`flex items-center justify-between p-6 hover:bg-gray-50 transition-colors ${
+                    index === 0 ? 'bg-blue-50' : ''
+                  }`}
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className={`p-3 rounded-full ${
+                      transaction.type === 'credit' 
+                        ? 'bg-green-100 text-green-600' 
+                        : 'bg-red-100 text-red-600'
+                    }`}>
+                      {getTransactionIcon(transaction.type)}
+                    </div>
                     <div>
-                      <p className="font-medium text-gray-900">
+                      <p className="font-semibold text-gray-900 text-base">
                         {transaction.description}
                       </p>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-500">
                         {transaction.merchant} • {formatDate(transaction.date)}
                       </p>
+                      {transaction.category && (
+                        <Badge variant="secondary" className="text-xs mt-1">
+                          {transaction.category}
+                        </Badge>
+                      )}
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className={`font-semibold ${
+                    <p className={`font-bold text-lg ${
                       transaction.type === 'credit' ? 'text-green-600' : 'text-red-600'
                     }`}>
                       {transaction.type === 'credit' ? '+' : '-'}{formatCurrency(transaction.amount)}
                     </p>
-                    <Badge variant={transaction.status === 'completed' ? 'default' : 'secondary'}>
+                    <Badge 
+                      variant={transaction.status === 'completed' ? 'default' : 'secondary'}
+                      className={`${
+                        transaction.status === 'completed' 
+                          ? 'bg-green-100 text-green-800 hover:bg-green-200' 
+                          : ''
+                      }`}
+                    >
                       {transaction.status}
                     </Badge>
                   </div>
                 </div>
               ))}
+              
+              {/* View More Button */}
+              {transactions.length > 8 && (
+                <div className="p-6 text-center bg-gray-50">
+                  <Button variant="outline" className="w-full">
+                    View All {transactions.length} Transactions
+                  </Button>
+                </div>
+              )}
             </div>
           </CardContent>
         </Card>
