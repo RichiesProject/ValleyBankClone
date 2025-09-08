@@ -51,7 +51,44 @@ export async function seedDatabase() {
       availableBalance: "4157.81", // Available credit = 5000 - 842.19
     });
 
-    console.log("Created accounts:", [checkingAccount.accountName, savingsAccount.accountName, creditAccount.accountName]);
+    // Create business checking account
+    const businessCheckingAccount = await storage.createAccount({
+      userId: user.id,
+      accountNumber: "****3456",
+      accountType: "business_checking",
+      accountName: "Business Premier Checking",
+      balance: "28540.67",
+      availableBalance: "28540.67",
+    });
+
+    // Create business savings account
+    const businessSavingsAccount = await storage.createAccount({
+      userId: user.id,
+      accountNumber: "****7890",
+      accountType: "business_savings",
+      accountName: "Business Money Market",
+      balance: "67250.00",
+      availableBalance: "67250.00",
+    });
+
+    // Create business credit line
+    const businessCreditAccount = await storage.createAccount({
+      userId: user.id,
+      accountNumber: "****2468",
+      accountType: "business_credit",
+      accountName: "Business Line of Credit",
+      balance: "-5650.00",
+      availableBalance: "44350.00", // Available credit = 50000 - 5650
+    });
+
+    console.log("Created accounts:", [
+      checkingAccount.accountName, 
+      savingsAccount.accountName, 
+      creditAccount.accountName,
+      businessCheckingAccount.accountName,
+      businessSavingsAccount.accountName,
+      businessCreditAccount.accountName
+    ]);
 
     // Create sample transactions for checking account
     const checkingTransactions = [

@@ -72,11 +72,17 @@ export default function Dashboard() {
   const getAccountTypeIcon = (type: string) => {
     switch (type) {
       case 'checking':
-        return <CreditCard className="h-5 w-5" />;
+        return <CreditCard className="h-5 w-5 text-blue-600" />;
       case 'savings':
-        return <TrendingUp className="h-5 w-5" />;
+        return <TrendingUp className="h-5 w-5 text-green-600" />;
       case 'credit':
-        return <Building className="h-5 w-5" />;
+        return <CreditCard className="h-5 w-5 text-purple-600" />;
+      case 'business_checking':
+        return <Building className="h-5 w-5 text-slate-600" />;
+      case 'business_savings':
+        return <Building className="h-5 w-5 text-emerald-600" />;
+      case 'business_credit':
+        return <Building className="h-5 w-5 text-orange-600" />;
       default:
         return <DollarSign className="h-5 w-5" />;
     }
@@ -156,39 +162,42 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Accounts Overview */}
           <div className="lg:col-span-2">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <DollarSign className="h-5 w-5 mr-2" />
-                  Your Accounts
+            {/* Personal Accounts */}
+            <Card className="mb-6">
+              <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50">
+                <CardTitle className="flex items-center text-slate-800">
+                  <CreditCard className="h-5 w-5 mr-2 text-blue-600" />
+                  Personal Accounts
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {accounts.map((account) => (
+              <CardContent className="p-0">
+                <div className="divide-y divide-gray-100">
+                  {accounts.filter(account => !account.accountType.startsWith('business')).map((account) => (
                     <div 
                       key={account.id}
-                      className="border rounded-lg p-4 hover:bg-gray-50 transition-colors cursor-pointer"
+                      className="p-6 hover:bg-gray-50 transition-all duration-200 cursor-pointer group"
                       onClick={() => setSelectedAccount(account.id)}
                     >
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          {getAccountTypeIcon(account.accountType)}
+                        <div className="flex items-center space-x-4">
+                          <div className="p-3 rounded-full bg-white shadow-sm border group-hover:shadow-md transition-shadow">
+                            {getAccountTypeIcon(account.accountType)}
+                          </div>
                           <div>
-                            <h3 className="font-semibold text-gray-900">
+                            <h3 className="font-semibold text-gray-900 text-lg">
                               {account.accountName}
                             </h3>
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm text-gray-500">
                               {account.accountNumber}
                             </p>
                           </div>
                         </div>
                         <div className="text-right">
-                          <p className="text-lg font-bold text-gray-900">
+                          <p className="text-2xl font-bold text-gray-900">
                             {formatCurrency(account.balance)}
                           </p>
-                          {account.accountType === 'credit' && (
-                            <p className="text-sm text-gray-600">
+                          {(account.accountType === 'credit' || account.accountType === 'business_credit') && (
+                            <p className="text-sm text-green-600 font-medium">
                               Available: {formatCurrency(account.availableBalance)}
                             </p>
                           )}
@@ -199,46 +208,95 @@ export default function Dashboard() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Business Accounts */}
+            {accounts.some(account => account.accountType.startsWith('business')) && (
+              <Card>
+                <CardHeader className="bg-gradient-to-r from-slate-50 to-gray-50">
+                  <CardTitle className="flex items-center text-slate-800">
+                    <Building className="h-5 w-5 mr-2 text-slate-600" />
+                    Business Accounts
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <div className="divide-y divide-gray-100">
+                    {accounts.filter(account => account.accountType.startsWith('business')).map((account) => (
+                      <div 
+                        key={account.id}
+                        className="p-6 hover:bg-gray-50 transition-all duration-200 cursor-pointer group"
+                        onClick={() => setSelectedAccount(account.id)}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-4">
+                            <div className="p-3 rounded-full bg-white shadow-sm border group-hover:shadow-md transition-shadow">
+                              {getAccountTypeIcon(account.accountType)}
+                            </div>
+                            <div>
+                              <h3 className="font-semibold text-gray-900 text-lg">
+                                {account.accountName}
+                              </h3>
+                              <p className="text-sm text-gray-500">
+                                {account.accountNumber}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <p className="text-2xl font-bold text-gray-900">
+                              {formatCurrency(account.balance)}
+                            </p>
+                            {(account.accountType === 'credit' || account.accountType === 'business_credit') && (
+                              <p className="text-sm text-green-600 font-medium">
+                                Available: {formatCurrency(account.availableBalance)}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
           </div>
 
           {/* Account Summary */}
           <div>
-            <Card className="mb-6">
+            <Card className="mb-6 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
               <CardHeader>
-                <CardTitle>Total Balance</CardTitle>
+                <CardTitle className="text-green-800">Total Balance</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-center">
-                  <p className="text-3xl font-bold text-green-600">
+                  <p className="text-4xl font-bold text-green-600 mb-2">
                     {formatCurrency(totalBalance.toString())}
                   </p>
-                  <p className="text-sm text-gray-600 mt-2">
+                  <p className="text-sm text-green-700 font-medium">
                     Across all accounts
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="mb-6">
               <CardHeader>
-                <CardTitle>Quick Stats</CardTitle>
+                <CardTitle className="text-slate-800">Quick Stats</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Total Accounts</span>
-                    <span className="font-semibold">{accounts.length}</span>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600 font-medium">Total Accounts</span>
+                    <span className="font-bold text-slate-800 text-lg">{accounts.length}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Recent Transactions</span>
-                    <span className="font-semibold">{transactions.length}</span>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600 font-medium">Recent Transactions</span>
+                    <span className="font-bold text-slate-800 text-lg">{transactions.length}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Credit Available</span>
-                    <span className="font-semibold text-green-600">
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-600 font-medium">Credit Available</span>
+                    <span className="font-bold text-green-600 text-lg">
                       {formatCurrency(
                         accounts
-                          .filter(a => a.accountType === 'credit')
+                          .filter(a => a.accountType === 'credit' || a.accountType === 'business_credit')
                           .reduce((sum, a) => sum + parseFloat(a.availableBalance), 0)
                           .toString()
                       )}
