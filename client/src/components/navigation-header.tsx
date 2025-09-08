@@ -7,25 +7,14 @@ export default function NavigationHeader() {
         <div className="flex items-center">
           {/* Left side - Logo and Badge */}
           <div className="flex items-center space-x-6">
-            {/* Bank Logo and Name */}
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                {/* Willamette Valley Bank Logo - Mountain Design */}
-                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="24" height="24" rx="4" fill="#2c3e50"/>
-                  <path d="M4 12c0-1.5 1-3 2.5-4.5C8 6 10 5 12 5s4 1 5.5 2.5C19 9 20 10.5 20 12" stroke="white" strokeWidth="1.5" fill="none"/>
-                  <path d="M4 16c2-1 4-1.5 6-1s4 1 6 0.5c2-0.5 4-1.5 4-2.5" stroke="white" strokeWidth="1.5" fill="none"/>
-                  <path d="M8 18c1.5-0.5 3-0.5 4 0s3 0.5 4.5 0" stroke="white" strokeWidth="1.2" fill="none"/>
-                </svg>
-              </div>
-              <div>
-                <div className="text-xl font-bold" data-testid="text-bank-name">
-                  Willamette
-                </div>
-                <div className="text-xl font-bold -mt-1" data-testid="text-bank-name-2">
-                  Valley Bank
-                </div>
-              </div>
+            {/* Bank Header Image */}
+            <div className="flex items-center">
+              <img 
+                src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/67d1faccda1c4e43dbff3d30_WVBK25Years_WebsiteHeader3-p-500.png"
+                alt="Willamette Valley Bank - 25 Years"
+                className="h-16 w-auto"
+                data-testid="img-bank-header"
+              />
             </div>
             
             {/* Vertical divider */}
