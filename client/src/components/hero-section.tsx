@@ -1,5 +1,4 @@
-// Using online placeholder until asset file can be accessed
-const mountainHikerImage = "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80";
+// Real Willamette Valley Bank images from their website
 
 export default function HeroSection() {
   return (
@@ -61,11 +60,19 @@ export default function HeroSection() {
           {/* Large center mountain scene - Made even larger */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-[450px] h-[450px] rounded-lg overflow-hidden shadow-xl z-30">
             <img 
-              src={mountainHikerImage} 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
               alt="Mountain hiking trail with wildflowers and hiker" 
               className="w-full h-full object-cover"
               data-testid="img-mountain-hiker"
             />
+            {/* #1 Community Bank Badge Overlay */}
+            <div className="absolute top-4 right-4 bg-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-40">
+              <div className="text-center">
+                <div className="text-xs font-bold text-gray-800 leading-none">No1</div>
+                <div className="text-xs text-gray-600 leading-tight">COMMUNITY</div>
+                <div className="text-xs text-gray-600 leading-none">BANK</div>
+              </div>
+            </div>
           </div>
 
           {/* Right top - Couple looking at house */}
