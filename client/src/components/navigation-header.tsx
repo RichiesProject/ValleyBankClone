@@ -1,6 +1,20 @@
 import { ChevronDown, Building2 } from 'lucide-react';
+import { useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
 
 export default function NavigationHeader() {
+  const [loginType, setLoginType] = useState('personal');
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isAccountOpen, setIsAccountOpen] = useState(false);
+
+  const handleOpenAccount = () => {
+    // Redirect to the account opening flow
+    window.open('https://willamettevalleybank.originate.fiservapps.com/zjH-Amx9-Dk3YX7/getting-started/landing-page', '_blank');
+  };
+
   return (
     <header className="bg-slate-800 text-white py-4" data-testid="navigation-header">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -212,21 +226,91 @@ export default function NavigationHeader() {
           
           {/* Right side - Login and Open Account with lots of space */}
           <div className="flex items-center space-x-3 ml-auto">
-            <div className="relative group">
-              <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors text-base" data-testid="button-login">
-                <span>Login</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {/* Login dropdown menu */}
-              <div className="absolute top-full right-0 mt-2 w-56 bg-white text-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-2">
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 transition-colors" data-testid="link-online-banking">Online Banking</a>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 transition-colors" data-testid="link-mobile-app">Mobile App</a>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 transition-colors" data-testid="link-business-online">Business Online</a>
+            {/* Login Modal */}
+            <Dialog open={isLoginOpen} onOpenChange={setIsLoginOpen}>
+              <DialogTrigger asChild>
+                <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors text-base" data-testid="button-login">
+                  <span>Login</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[800px] p-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                  {/* Left Side - Online Banking Login */}
+                  <div className="p-6 border-r">
+                    <DialogHeader className="mb-6">
+                      <DialogTitle className="text-xl font-semibold text-gray-800">Online Banking Login</DialogTitle>
+                    </DialogHeader>
+                    
+                    <div className="space-y-4">
+                      <RadioGroup 
+                        value={loginType} 
+                        onValueChange={setLoginType}
+                        className="flex gap-6"
+                      >
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="personal" id="personal" />
+                          <Label htmlFor="personal" className="text-sm">Personal & Small Business</Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="corporate" id="corporate" />
+                          <Label htmlFor="corporate" className="text-sm">Corporate</Label>
+                        </div>
+                      </RadioGroup>
+                      
+                      <div className="flex gap-3 mt-6">
+                        <Button 
+                          className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-2"
+                          onClick={() => {
+                            if (loginType === 'personal') {
+                              window.open('https://wvbk.ebanking-services.com/LOGIN/Login.aspx', '_blank');
+                            } else {
+                              window.open('https://wvbk.ebanking-services.com/CorporateLogin/CorporateLogin.aspx', '_blank');
+                            }
+                          }}
+                        >
+                          Sign In
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          className="text-slate-600 border-slate-300 hover:bg-gray-50"
+                          onClick={() => {
+                            window.open('https://wvbk.ebanking-services.com/LOGIN/ForgotPassword.aspx', '_blank');
+                          }}
+                        >
+                          Recover Account
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Right Side - Register */}
+                  <div className="p-6">
+                    <DialogHeader className="mb-6">
+                      <DialogTitle className="text-xl font-semibold text-gray-800">Register for online account access</DialogTitle>
+                    </DialogHeader>
+                    
+                    <div className="space-y-4">
+                      <p className="text-sm text-gray-600 mb-4">
+                        New to online banking? Get secure access to your accounts 24/7.
+                      </p>
+                      <Button 
+                        className="bg-blue-600 hover:bg-blue-700 text-white w-full"
+                        onClick={() => {
+                          window.open('https://wvbk.ebanking-services.com/Enrollment/Agreement.aspx', '_blank');
+                        }}
+                      >
+                        Enroll Now
+                      </Button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </DialogContent>
+            </Dialog>
+            
+            {/* Open Account Button */}
             <button 
+              onClick={handleOpenAccount}
               className="bg-white text-slate-800 px-4 py-1.5 rounded text-sm font-medium hover:bg-gray-100 hover:-translate-y-1 transition-all duration-300"
               data-testid="button-open-account"
             >
