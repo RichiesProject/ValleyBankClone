@@ -83,7 +83,7 @@ export default function PrivacyConsent() {
 
       {/* Privacy Preference Center Modal */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-md max-h-[85vh] overflow-y-auto">
+        <DialogContent className="max-w-sm max-h-[85vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-slate-800 mb-3">
               Privacy Preference Center
