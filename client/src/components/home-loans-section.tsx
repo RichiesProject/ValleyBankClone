@@ -17,7 +17,10 @@ export default function HomeLoansSection() {
               planning for the future, WVBK is here to empower your financial<br />
               journey, and answer any questions you have along the way.
             </p>
-            <button 
+            <a
+              href="https://www.willamettevalleybank.com/personal/home-loans"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-slate-800 px-6 py-3 rounded font-medium hover:bg-gray-100 hover:-translate-y-1 transition-all duration-300 inline-flex items-center space-x-2"
               data-testid="button-home-loans-learn-more"
             >
@@ -25,7 +28,7 @@ export default function HomeLoansSection() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </a>
           </div>
           <div>
             {/* Remove image to match screenshot layout */}
