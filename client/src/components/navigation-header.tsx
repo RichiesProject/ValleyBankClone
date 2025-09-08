@@ -182,24 +182,55 @@ export default function NavigationHeader() {
                 <span>About</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-              {/* About dropdown menu */}
-              <div className="absolute top-full left-0 mt-2 w-80 bg-white text-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-4">
-                  <div className="px-4 py-2 font-semibold text-slate-600 border-b">Our Bank</div>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-about-us">About Willamette Valley Bank</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-leadership">Leadership Team</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-board-directors">Board of Directors</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-history">Our History</a>
-                  
-                  <div className="px-4 py-2 font-semibold text-slate-600 border-b border-t mt-2">Community</div>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-community-involvement">Community Involvement</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-financial-education">Financial Education</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-local-partnerships">Local Partnerships</a>
-                  
-                  <div className="px-4 py-2 font-semibold text-slate-600 border-b border-t mt-2">News & Careers</div>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-news-events">News & Events</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-press-releases">Press Releases</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-careers">Careers</a>
+              {/* About dropdown menu - 2 column layout */}
+              <div className="absolute top-full left-0 mt-2 w-[700px] bg-white text-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="p-6">
+                  <div className="grid grid-cols-3 gap-8">
+                    {/* Left Column - Who We Are */}
+                    <div>
+                      <h3 className="font-semibold text-slate-700 mb-4 text-base border-b pb-2">Who We Are</h3>
+                      <div className="space-y-1">
+                        <a href="https://www.willamettevalleybank.com/about-us" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-about-us">About Us</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-executives-directors">Executives & Directors</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-mortgage-leadership">Mortgage Leadership Team</a>
+                        <a href="https://www.willamettevalleybank.com/community" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-community">Community</a>
+                      </div>
+                    </div>
+                    
+                    {/* Middle Column - Find Out More */}
+                    <div>
+                      <h3 className="font-semibold text-slate-700 mb-4 text-base border-b pb-2">Find Out More</h3>
+                      <div className="space-y-1">
+                        <a href="https://www.willamettevalleybank.com/news" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-news">News</a>
+                        <a href="https://www.willamettevalleybank.com/resources/education-center" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-education">Education</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-investor-relations">Investor Relations</a>
+                        <a href="https://www.willamettevalleybank.com/careers" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-careers">Careers</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-contact-us">Contact Us</a>
+                      </div>
+                    </div>
+                    
+                    {/* Right Column - Promotional Section */}
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <div className="mb-3">
+                        <img 
+                          src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/65dce87bebfcc75bfdb40344_AdobeStock_197235867.webp" 
+                          alt="Community banking professionals" 
+                          className="w-full h-16 object-cover rounded"
+                          data-testid="img-about-promo"
+                        />
+                      </div>
+                      <h4 className="font-semibold text-slate-800 mb-2 text-sm">Discover Our Community Focus</h4>
+                      <a 
+                        href="https://www.willamettevalleybank.com/about-us" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-blue-600 hover:text-blue-700 text-xs font-medium transition-colors"
+                        data-testid="link-learn-more-about"
+                      >
+                        Learn More →
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
