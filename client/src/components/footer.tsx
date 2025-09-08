@@ -33,8 +33,16 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-sm font-semibold mb-1" data-testid="text-headquarters-label">Bank Headquarters</p>
-                <p className="text-gray-300 text-sm" data-testid="text-address-line1">101 High St NE</p>
-                <p className="text-gray-300 text-sm" data-testid="text-address-line2">Salem, Oregon 97301</p>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=101+High+St+NE,+Salem,+Oregon+97301"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-gray-300 hover:text-white transition-colors cursor-pointer"
+                  data-testid="link-headquarters-address"
+                >
+                  <p className="text-sm" data-testid="text-address-line1">101 High St NE</p>
+                  <p className="text-sm" data-testid="text-address-line2">Salem, Oregon 97301</p>
+                </a>
               </div>
             </div>
             {/* Social Media Icons */}
