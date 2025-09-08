@@ -178,22 +178,20 @@ export default function LiveChatWidget() {
         data-testid="button-live-chat"
       >
         {/* Background container matching bank style */}
-        <div className="bg-gray-800 rounded-lg p-4 flex flex-col items-center shadow-lg">
-          {/* White speech bubble with dots */}
-          <div className="relative bg-white rounded-2xl w-14 h-9 flex items-center justify-center mb-2 shadow-sm">
-            {/* Speech bubble tail */}
-            <div className="absolute -bottom-1 left-3 w-3 h-3 bg-white transform rotate-45"></div>
-            <div className="flex space-x-1">
-              <div className="w-1.5 h-1.5 bg-gray-600 rounded-full"></div>
-              <div className="w-1.5 h-1.5 bg-gray-600 rounded-full"></div>
-              <div className="w-1.5 h-1.5 bg-gray-600 rounded-full"></div>
+        <div className="bg-gray-800 rounded-lg p-3 flex flex-col items-center shadow-lg">
+          {/* White speech bubble with dots - simplified */}
+          <div className="bg-white rounded-full w-8 h-6 flex items-center justify-center mb-2">
+            <div className="flex space-x-0.5">
+              <div className="w-1 h-1 bg-gray-800 rounded-full"></div>
+              <div className="w-1 h-1 bg-gray-800 rounded-full"></div>
+              <div className="w-1 h-1 bg-gray-800 rounded-full"></div>
             </div>
           </div>
           
           {/* LIVE CHAT text */}
-          <div className="text-center">
-            <div className="text-cyan-400 text-xs font-bold tracking-wider">LIVE</div>
-            <div className="text-white text-xs font-bold tracking-wider">CHAT</div>
+          <div className="text-center leading-tight">
+            <div className="text-cyan-400 text-[10px] font-bold tracking-wide">LIVE</div>
+            <div className="text-white text-[10px] font-bold tracking-wide">CHAT</div>
           </div>
         </div>
       </div>
