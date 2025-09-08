@@ -68,7 +68,7 @@ export default function HeroSection() {
           {/* Right top - Couple looking at house */}
           <div className="absolute right-32 top-0 w-64 h-64 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66e8a4c18adb7c866821a811_AdobeStock_115986933%20(3)-p-1080.png" 
               alt="Couple looking at their home" 
               className="w-full h-full object-cover"
               data-testid="img-couple-house"
