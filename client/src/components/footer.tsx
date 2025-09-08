@@ -94,7 +94,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold tracking-wide" data-testid="text-personal-title">PERSONAL</h3>
             <div className="space-y-2">
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-personal-checking">
+              <a href="https://www.willamettevalleybank.com/personal/personal-checking" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-personal-checking">
                 Personal Checking
               </a>
               <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-personal-savings">
