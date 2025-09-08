@@ -74,13 +74,13 @@ export default function NavigationHeader() {
                     <div>
                       <h3 className="font-semibold text-slate-700 mb-4 text-base border-b pb-2">Loans</h3>
                       <div className="space-y-1 mb-6">
-                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-loans">Business Loans</a>
+                        <a href="https://www.willamettevalleybank.com/business/commercial-loans" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-loans">Business Loans</a>
                         <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-locate-commercial-lender">Locate a Commercial Lender</a>
                       </div>
                       
                       <h3 className="font-semibold text-slate-700 mb-4 text-base border-b pb-2">Lending</h3>
                       <div className="space-y-1 mb-6">
-                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-loans-2">Business Loans</a>
+                        <a href="https://www.willamettevalleybank.com/business/commercial-loans" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-loans-2">Business Loans</a>
                         <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-equipment-financing">Equipment Financing</a>
                         <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-commercial-real-estate">Commercial Real Estate</a>
                         <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-sba-loans">SBA Loans</a>
