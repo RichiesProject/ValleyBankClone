@@ -15,7 +15,7 @@ export default function NavigationHeader() {
 
   const handleContinueToAccount = () => {
     setIsSecurityNoticeOpen(false);
-    window.open('https://willamettevalleybank.originate.fiservapps.com/zjH-Amx9-Dk3YX7/getting-started/landing-page', '_blank');
+    window.open('https://www.willamettevalleybank.com', '_blank');
   };
 
   return (
