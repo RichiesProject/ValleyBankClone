@@ -179,12 +179,18 @@ export default function LiveChatWidget() {
       >
         {/* Background container matching bank style */}
         <div className="bg-gray-800 rounded-lg p-3 flex flex-col items-center shadow-lg">
-          {/* White speech bubble with dots - simplified */}
-          <div className="bg-white rounded-full w-8 h-6 flex items-center justify-center mb-2">
+          {/* White speech bubble with dots and tail */}
+          <div className="relative bg-white rounded-full w-8 h-6 flex items-center justify-center mb-1">
             <div className="flex space-x-0.5">
               <div className="w-1 h-1 bg-gray-800 rounded-full"></div>
               <div className="w-1 h-1 bg-gray-800 rounded-full"></div>
               <div className="w-1 h-1 bg-gray-800 rounded-full"></div>
+            </div>
+            {/* Curved tail pointing toward the L */}
+            <div className="absolute -bottom-0.5 left-1">
+              <svg width="6" height="4" viewBox="0 0 6 4" className="fill-white">
+                <path d="M0 0 Q3 4 6 2 Q4 3 2 1 Q1 0.5 0 0" />
+              </svg>
             </div>
           </div>
           
