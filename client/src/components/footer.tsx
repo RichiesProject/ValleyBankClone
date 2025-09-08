@@ -109,7 +109,7 @@ export default function Footer() {
               <a href="https://www.willamettevalleybank.com/personal/home-loans" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-home-loans-footer">
                 Home Loans
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-home-loan-centers">
+              <a href="https://www.willamettevalleybank.com/personal/home-loan-centers" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-home-loan-centers">
                 Home Loan Centers
               </a>
             </div>
