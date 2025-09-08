@@ -142,7 +142,7 @@ export default function NavigationHeader() {
                     <div>
                       <h3 className="font-semibold text-slate-700 mb-4 text-lg">Loans</h3>
                       <div className="space-y-1">
-                        <a href="/home-loans" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-home-loans">
+                        <a href="https://www.willamettevalleybank.com/personal/home-loans" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-home-loans">
                           Home Loans
                         </a>
                         <a href="/home-loan-centers" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-home-loan-centers">
