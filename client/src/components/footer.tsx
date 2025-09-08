@@ -24,8 +24,12 @@ export default function Footer() {
             <div className="space-y-3">
               <div>
                 <p className="text-sm font-semibold mb-1" data-testid="text-contact-label">CONTACT:</p>
-                <a href="tel:5034852222" className="text-gray-300 hover:text-white transition-colors cursor-pointer" data-testid="text-phone">503.485.2222</a>
-                <a href="mailto:contact@wvbk.com" className="text-gray-300 hover:text-white transition-colors cursor-pointer" data-testid="text-email">contact@wvbk.com</a>
+                <p className="text-gray-300">
+                  <a href="tel:5034852222" className="text-gray-300 hover:text-white transition-colors cursor-pointer" data-testid="text-phone">503.485.2222</a>
+                </p>
+                <p className="text-gray-300">
+                  <a href="mailto:contact@wvbk.com" className="text-gray-300 hover:text-white transition-colors cursor-pointer" data-testid="text-email">contact@wvbk.com</a>
+                </p>
               </div>
               <div>
                 <p className="text-sm font-semibold mb-1" data-testid="text-headquarters-label">Bank Headquarters</p>
