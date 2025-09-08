@@ -58,8 +58,8 @@ export default function HeroSection() {
           {/* Large center mountain scene - Made even larger */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-[450px] h-[450px] rounded-lg overflow-hidden shadow-xl z-30">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
-              alt="Mount Rainier with hiker and wildflowers" 
+              src="/attached_assets/Screenshot 2025-09-07 at 8.07.35 PM_1757290127537.png" 
+              alt="Mountain hiking trail with wildflowers and hiker" 
               className="w-full h-full object-cover"
               data-testid="img-mountain-hiker"
             />
