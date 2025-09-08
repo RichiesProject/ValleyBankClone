@@ -17,12 +17,15 @@ export default function HeroSection() {
             >
               Community Banking
             </a>
-            <button 
-              className="bg-slate-700 text-white px-8 py-3 rounded font-medium hover:bg-slate-600 hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+            <a 
+              href="https://www.willamettevalleybank.com/personal/home-loans"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-slate-700 text-white px-8 py-3 rounded font-medium hover:bg-slate-600 hover:-translate-y-2 hover:shadow-lg transition-all duration-300 inline-block text-center"
               data-testid="button-home-loan-journeys"
             >
               Home Loan Journeys
-            </button>
+            </a>
           </div>
         </div>
 
