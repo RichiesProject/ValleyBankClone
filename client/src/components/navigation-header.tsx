@@ -197,7 +197,7 @@ export default function NavigationHeader() {
                       <div className="space-y-1">
                         <a href="https://www.willamettevalleybank.com/about-us/news" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-news">News</a>
                         <a href="https://www.willamettevalleybank.com/education" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-education">Education</a>
-                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-investor-relations">Investor Relations</a>
+                        <a href="https://ir.willamettevalleybank.com/overview/default.aspx" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-investor-relations">Investor Relations</a>
                         <a href="https://www.willamettevalleybank.com/careers" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-careers">Careers</a>
                         <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-contact-us">Contact Us</a>
                       </div>
