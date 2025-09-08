@@ -12,6 +12,7 @@ import PersonalCreditCards from "@/pages/personal-credit-cards";
 import HomeLoans from "@/pages/home-loans";
 import HomeLoanCenters from "@/pages/home-loan-centers";
 import HomeLoanQuestions from "@/pages/home-loan-questions";
+import LiveChatWidget from "@/components/live-chat-widget";
 
 function Router() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <LiveChatWidget />
       </TooltipProvider>
     </QueryClientProvider>
   );
