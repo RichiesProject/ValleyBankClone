@@ -32,7 +32,7 @@ function Router() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <img 
-            src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/67d1faccda1c4e43dbff3d30_WVBK25Years_WebsiteHeader3-p-500.png"
+            src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b9d07c37f26e549c64b2aa_66b64d085e84150bd3a56016_IMG_4636.jpg"
             alt="Willamette Valley Bank"
             className="h-16 mx-auto mb-4"
           />
