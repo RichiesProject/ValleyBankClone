@@ -13,6 +13,14 @@ interface LoginCredentials {
   password: string;
 }
 
+interface RegisterCredentials {
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  username: string;
+}
+
 export function useAuth() {
   const queryClient = useQueryClient();
 
@@ -43,6 +51,27 @@ export function useAuth() {
     },
   });
 
+  const registerMutation = useMutation({
+    mutationFn: async (credentials: RegisterCredentials) => {
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(credentials),
+      });
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Registration failed');
+      }
+      return response.json();
+    },
+    onSuccess: (data) => {
+      queryClient.setQueryData(['/api/auth/me'], data);
+      queryClient.invalidateQueries({ queryKey: ['/api/auth/me'] });
+    },
+  });
+
   const logoutMutation = useMutation({
     mutationFn: async () => {
       const response = await fetch('/api/auth/logout', {
@@ -64,8 +93,10 @@ export function useAuth() {
     isLoading,
     isAuthenticated: !!authData?.user,
     login: loginMutation.mutateAsync,
+    register: registerMutation.mutateAsync,
     logout: logoutMutation.mutateAsync,
     isLoggingIn: loginMutation.isPending,
+    isRegistering: registerMutation.isPending,
     isLoggingOut: logoutMutation.isPending,
   };
 }
