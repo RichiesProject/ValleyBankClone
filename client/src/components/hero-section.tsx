@@ -23,42 +23,42 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Large Image Mosaic Layout - Matching Bank's Website Exactly */}
+        {/* Large Image Mosaic Layout - Exactly like Bank's Original Website */}
         <div className="relative h-[500px] lg:h-[600px]">
-          {/* Far left - Person with winter hat in forest */}
+          {/* Far left - Person with skis in winter forest */}
           <div className="absolute left-0 top-16 w-24 h-80 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
-              alt="Person with winter hat looking up in forest" 
+              src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+              alt="Person with skis in winter forest" 
               className="w-full h-full object-cover"
-              data-testid="img-winter-person"
+              data-testid="img-winter-skier"
             />
           </div>
 
           {/* Left top - Beach scene with person and dog */}
           <div className="absolute left-32 top-0 w-64 h-48 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4682ce3e6238b171d64_AdobeStock_555122175.webp" 
-              alt="Person running on beach with dog at sunset" 
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+              alt="Person running on beach with dog" 
               className="w-full h-full object-cover"
               data-testid="img-beach-scene"
             />
           </div>
 
-          {/* Left bottom - Happy family with child in blue */}
+          {/* Left bottom - Family with child in blue */}
           <div className="absolute left-32 bottom-16 w-64 h-64 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
-              alt="Happy family with child in blue checkered dress" 
+              src="https://images.unsplash.com/photo-1511895426328-dc8714aecd7" 
+              alt="Happy family with child in blue" 
               className="w-full h-full object-cover"
               data-testid="img-family-child"
             />
           </div>
 
-          {/* Large center mountain scene */}
+          {/* Large center mountain scene with hiker and wildflowers */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-[450px] h-[450px] rounded-lg overflow-hidden shadow-xl z-30">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
+              src="https://images.unsplash.com/photo-1464822759844-d150937bf34f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
               alt="Mountain hiking trail with wildflowers and hiker" 
               className="w-full h-full object-cover"
               data-testid="img-mountain-hiker"
@@ -68,7 +68,7 @@ export default function HeroSection() {
           {/* Right top - Couple looking at house */}
           <div className="absolute right-32 top-0 w-64 h-64 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b9d07c37f26e549c64b2aa_66b64d085e84150bd3a56016_IMG_4636.jpg" 
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" 
               alt="Couple looking at their home" 
               className="w-full h-full object-cover"
               data-testid="img-couple-house"
@@ -78,20 +78,20 @@ export default function HeroSection() {
           {/* Right bottom - Family cooking together */}
           <div className="absolute right-32 bottom-16 w-64 h-48 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
+              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
               alt="Family cooking together in kitchen" 
               className="w-full h-full object-cover"
-              data-testid="img-family-cooking-right"
+              data-testid="img-kitchen-scene"
             />
           </div>
 
-          {/* Far right - Couple at scenic location */}
+          {/* Far right - Waterfall scene */}
           <div className="absolute right-0 top-16 w-24 h-80 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b9d07c37f26e549c64b2aa_66b64d085e84150bd3a56016_IMG_4636.jpg" 
-              alt="Couple at scenic location" 
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+              alt="Waterfall in forest" 
               className="w-full h-full object-cover"
-              data-testid="img-couple-scenic"
+              data-testid="img-waterfall-scene"
             />
           </div>
         </div>
