@@ -13,6 +13,7 @@ import HomeLoans from "@/pages/home-loans";
 import HomeLoanCenters from "@/pages/home-loan-centers";
 import HomeLoanQuestions from "@/pages/home-loan-questions";
 import LiveChatWidget from "@/components/live-chat-widget";
+import PrivacyConsent from "@/components/privacy-consent";
 
 function Router() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Toaster />
         <Router />
         <LiveChatWidget />
+        <PrivacyConsent />
       </TooltipProvider>
     </QueryClientProvider>
   );
