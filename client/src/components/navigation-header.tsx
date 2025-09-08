@@ -3,12 +3,18 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from '@/components/ui/dialog';
 
 export default function NavigationHeader() {
   const [loginType, setLoginType] = useState('personal');
+  const [isSecurityNoticeOpen, setIsSecurityNoticeOpen] = useState(false);
 
   const handleOpenAccount = () => {
-    // Redirect to the account opening flow
+    setIsSecurityNoticeOpen(true);
+  };
+
+  const handleContinueToAccount = () => {
+    setIsSecurityNoticeOpen(false);
     window.open('https://willamettevalleybank.originate.fiservapps.com/zjH-Amx9-Dk3YX7/getting-started/landing-page', '_blank');
   };
 
@@ -304,6 +310,27 @@ export default function NavigationHeader() {
             >
               Open Account
             </button>
+
+            {/* Security Notice Modal */}
+            <Dialog open={isSecurityNoticeOpen} onOpenChange={setIsSecurityNoticeOpen}>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-normal text-gray-900 mb-4">Security Notice</DialogTitle>
+                  <DialogDescription className="sr-only">Security notice for third party link</DialogDescription>
+                </DialogHeader>
+                <div className="space-y-4">
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    This is a link to a third party site. Note that the third party's privacy policy and security practices may differ from Willamette Valley Bank standards. Willamette Valley Bank assumes no responsibility nor does it control, endorse or guarantee any aspect of your use of the linked site.
+                  </p>
+                  <Button 
+                    onClick={handleContinueToAccount}
+                    className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-2 text-sm font-medium"
+                  >
+                    Continue
+                  </Button>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>
