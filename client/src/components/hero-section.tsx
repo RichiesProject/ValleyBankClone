@@ -9,13 +9,13 @@ export default function HeroSection() {
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
-              className="bg-white text-slate-800 px-8 py-3 rounded font-medium hover:bg-gray-100 transition-all duration-300"
+              className="bg-white text-slate-800 px-8 py-3 rounded font-medium hover:bg-gray-100 hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
               data-testid="button-community-banking"
             >
               Community Banking
             </button>
             <button 
-              className="bg-slate-700 text-white px-8 py-3 rounded font-medium hover:bg-slate-600 transition-all duration-300"
+              className="bg-slate-700 text-white px-8 py-3 rounded font-medium hover:bg-slate-600 hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
               data-testid="button-home-loan-journeys"
             >
               Home Loan Journeys
