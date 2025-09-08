@@ -171,25 +171,16 @@ export default function LiveChatWidget() {
         </div>
       )}
 
-      {/* Live Chat Button */}
-      <button
+      {/* Live Chat Button - Bank Style */}
+      <img
+        id="liveHelpIcon"
+        alt="start chat"
         onClick={handleChatClick}
-        className="fixed bottom-6 right-6 bg-transparent hover:bg-gray-50 transition-colors z-[9999] flex flex-col items-center space-y-1 p-2 rounded-lg cursor-pointer"
+        className="fixed bottom-6 right-6 cursor-pointer hover:opacity-80 transition-opacity z-[9999]"
+        style={{ height: '60px', width: '60px' }}
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' width='60' height='60'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232563eb'/%3E%3Cstop offset='100%25' stop-color='%231d4ed8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='30' cy='30' r='28' fill='url(%23grad)' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M18 24c0-3 2-6 5-8 3-2 7-3 11-3s8 1 11 3c3 2 5 5 5 8v8c0 3-2 6-5 8-1.5 1-3.5 2-5.5 2.5l-3 3c-0.5 0.5-1.5 0.5-2 0l-3-3c-2-0.5-4-1.5-5.5-2.5-3-2-5-5-5-8v-8z' fill='%23fff'/%3E%3Ccircle cx='24' cy='28' r='2' fill='%232563eb'/%3E%3Ccircle cx='30' cy='28' r='2' fill='%232563eb'/%3E%3Ccircle cx='36' cy='28' r='2' fill='%232563eb'/%3E%3C/svg%3E"
         data-testid="button-live-chat"
-        style={{ pointerEvents: 'auto' }}
-      >
-        {/* Speech bubble icon with three dots */}
-        <div className="relative bg-white rounded-full p-3 shadow-lg">
-          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 11.5C21 16.194 16.97 20 12 20C10.73 20 9.527 19.752 8.44 19.305L3 21L4.696 15.56C4.248 14.473 4 13.27 4 12C4 7.306 8.03 3.5 12 3.5C16.97 3.5 21 6.806 21 11.5Z" fill="white" stroke="#e5e5e5" strokeWidth="1"/>
-            {/* Three dots */}
-            <circle cx="9" cy="12" r="1.5" fill="#6b7280"/>
-            <circle cx="12" cy="12" r="1.5" fill="#6b7280"/>
-            <circle cx="15" cy="12" r="1.5" fill="#6b7280"/>
-          </svg>
-        </div>
-        <span className="text-xs font-medium text-cyan-400 uppercase tracking-wide">LIVE<br />CHAT</span>
-      </button>
+      />
     </>
   );
 }
