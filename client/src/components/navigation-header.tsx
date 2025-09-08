@@ -58,7 +58,7 @@ export default function NavigationHeader() {
                       <div className="space-y-1">
                         <a href="https://www.willamettevalleybank.com/business/business-checking" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-checking">Business Checking</a>
                         <a href="https://www.willamettevalleybank.com/business/business-savings" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-savings">Business Savings</a>
-                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-credit-cards">Business Credit Cards</a>
+                        <a href="https://www.willamettevalleybank.com/business/business-credit-cards" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-credit-cards">Business Credit Cards</a>
                       </div>
                       
                       <h3 className="font-semibold text-slate-700 mb-4 mt-6 text-base border-b pb-2">Banking Services</h3>
