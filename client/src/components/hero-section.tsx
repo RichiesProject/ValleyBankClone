@@ -4,7 +4,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Title and Buttons */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8" data-testid="text-hero-title">
+          <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 font-serif" data-testid="text-hero-title">
             Where Local Means Everything
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
