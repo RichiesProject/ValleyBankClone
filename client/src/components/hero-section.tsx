@@ -25,13 +25,13 @@ export default function HeroSection() {
 
         {/* Large Image Mosaic Layout - Matching Bank's Website Exactly */}
         <div className="relative h-[500px] lg:h-[600px]">
-          {/* Far left - Kitchen/interior scene */}
+          {/* Far left - Person with winter hat in forest */}
           <div className="absolute left-0 top-16 w-24 h-80 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
-              alt="Interior kitchen scene" 
+              src="@assets/Screenshot 2025-09-07 at 8.37.19 PM_1757291857050.png" 
+              alt="Person with winter hat looking up in forest" 
               className="w-full h-full object-cover"
-              data-testid="img-left-interior"
+              data-testid="img-winter-person"
             />
           </div>
 
