@@ -267,7 +267,7 @@ export default function NavigationHeader() {
                           size="sm"
                           className="text-slate-600 border-slate-300 hover:bg-gray-50 px-3 py-1 text-xs"
                           onClick={() => {
-                            window.open('https://wvbk.ebanking-services.com/LOGIN/ForgotPassword.aspx', '_blank');
+                            window.open('https://web15.secureinternetbank.com/pbi_pbi1151/ForgotPassword/123206859', '_blank');
                           }}
                         >
                           Recover Account
