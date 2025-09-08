@@ -58,7 +58,7 @@ export default function HeroSection() {
           {/* Large center mountain scene with hiker and wildflowers */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-[450px] h-[450px] rounded-lg overflow-hidden shadow-xl z-30">
             <img 
-              src="https://images.unsplash.com/photo-1464822759844-d150937bf34f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66e8adcd7105b1f7ac24548c_AdobeStock_913272681-hood-sm.png" 
               alt="Mountain hiking trail with wildflowers and hiker" 
               className="w-full h-full object-cover"
               data-testid="img-mountain-hiker"
