@@ -38,7 +38,7 @@ export default function HeroSection() {
           {/* Left top - Beach scene with person and dog */}
           <div className="absolute left-32 top-0 w-64 h-48 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66e89d0e48b098a8c63b2175_AdobeStock_262265733.png" 
               alt="Person running on beach with dog" 
               className="w-full h-full object-cover"
               data-testid="img-beach-scene"
