@@ -257,11 +257,7 @@ export default function NavigationHeader() {
                           size="sm"
                           className="bg-slate-800 hover:bg-slate-700 text-white px-4 py-1 text-xs"
                           onClick={() => {
-                            if (loginType === 'personal') {
-                              window.open('https://wvbk.ebanking-services.com/LOGIN/Login.aspx', '_blank');
-                            } else {
-                              window.open('https://wvbk.ebanking-services.com/CorporateLogin/CorporateLogin.aspx', '_blank');
-                            }
+                            window.open('https://web15.secureinternetbank.com/PBI_PBI1151/Login/123206859', '_blank');
                           }}
                         >
                           Sign In
