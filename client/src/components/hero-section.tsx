@@ -85,11 +85,11 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Far right - Waterfall scene */}
+          {/* Far right - Outdoor nature scene */}
           <div className="absolute right-0 top-16 w-24 h-80 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
             <img 
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-              alt="Waterfall in forest" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66e8a1fc4ea46beef106deff_AdobeStock_416809840.png" 
+              alt="Outdoor nature scene" 
               className="w-full h-full object-cover"
               data-testid="img-waterfall-scene"
             />
