@@ -16,18 +16,6 @@ export default function NavigationHeader() {
                 data-testid="img-bank-header"
               />
             </div>
-            
-            {/* Vertical divider */}
-            <div className="h-12 w-px bg-gray-400"></div>
-            
-            {/* 25 Years of Service Badge */}
-            <div className="text-white font-bold text-2xl tracking-wide flex items-center" data-testid="logo-25-years">
-              <span className="text-4xl">25</span>
-              <div className="text-sm leading-tight ml-2">
-                YEARS <span className="italic">of</span><br />
-                SERVICE
-              </div>
-            </div>
           </div>
           
           {/* Center - Main Navigation */}
