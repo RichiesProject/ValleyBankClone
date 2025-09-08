@@ -65,14 +65,6 @@ export default function HeroSection() {
               className="w-full h-full object-cover"
               data-testid="img-mountain-hiker"
             />
-            {/* #1 Community Bank Badge Overlay */}
-            <div className="absolute top-4 right-4 bg-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg z-40">
-              <div className="text-center">
-                <div className="text-xs font-bold text-gray-800 leading-none">No1</div>
-                <div className="text-xs text-gray-600 leading-tight">COMMUNITY</div>
-                <div className="text-xs text-gray-600 leading-none">BANK</div>
-              </div>
-            </div>
           </div>
 
           {/* Right top - Couple looking at house */}
