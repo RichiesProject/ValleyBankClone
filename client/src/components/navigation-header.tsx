@@ -185,7 +185,7 @@ export default function NavigationHeader() {
                       <h3 className="font-semibold text-slate-700 mb-4 text-base border-b pb-2">Who We Are</h3>
                       <div className="space-y-1">
                         <a href="https://www.willamettevalleybank.com/about-us" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-about-us">About Us</a>
-                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-executives-directors">Executives & Directors</a>
+                        <a href="https://www.willamettevalleybank.com/about-us/executives" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-executives-directors">Executives & Directors</a>
                         <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-mortgage-leadership">Mortgage Leadership Team</a>
                         <a href="https://www.willamettevalleybank.com/community" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-community">Community</a>
                       </div>
