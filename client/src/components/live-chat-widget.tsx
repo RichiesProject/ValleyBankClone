@@ -37,7 +37,7 @@ export default function LiveChatWidget() {
     <>
       {/* Chat window */}
       {isOpen && (
-        <div className="fixed bottom-20 right-6 bg-white rounded-2xl shadow-2xl border border-gray-200 w-96 h-[600px] z-50 flex flex-col" data-testid="chat-window">
+        <div className="fixed bottom-24 right-4 bg-white rounded-2xl shadow-2xl border border-gray-200 w-96 h-[600px] z-[10000] flex flex-col" data-testid="chat-window">
           {/* Header */}
           <div className="bg-slate-800 text-white px-6 py-4 rounded-t-2xl flex justify-between items-center">
             <div className="text-sm font-medium">Willamette Valley Bank</div>
