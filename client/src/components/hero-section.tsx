@@ -35,13 +35,13 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Left top - Couple with moving boxes */}
+          {/* Left top - Beach scene with person and dog */}
           <div className="absolute left-32 top-0 w-64 h-48 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4682ce3e6238b171d64_AdobeStock_555122175.webp" 
-              alt="Couple with moving boxes" 
+              src="@assets/Screenshot 2025-09-07 at 8.38.19 PM_1757291928305.png" 
+              alt="Person running on beach with dog at sunset" 
               className="w-full h-full object-cover"
-              data-testid="img-couple-boxes"
+              data-testid="img-beach-scene"
             />
           </div>
 
