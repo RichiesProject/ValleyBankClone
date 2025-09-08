@@ -90,7 +90,7 @@ export default function NavigationHeader() {
                       <div className="bg-gray-50 rounded-lg p-4">
                         <div className="mb-3">
                           <img 
-                            src="/attached_assets/Screenshot 2025-09-07 at 10.53.22 PM_1757300010574.png" 
+                            src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/65e96d60e44da13127ffb7a5_pexels-fauxels-3182796.webp" 
                             alt="Business team meeting" 
                             className="w-full h-16 object-cover rounded"
                             data-testid="img-business-loan-promo"
