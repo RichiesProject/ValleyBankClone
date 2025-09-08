@@ -12,7 +12,9 @@ export default function LiveChatWidget() {
   });
 
   const handleChatClick = () => {
+    console.log('Chat button clicked, current isOpen:', isOpen);
     setIsOpen(!isOpen);
+    console.log('Setting isOpen to:', !isOpen);
   };
 
   const handleStartChat = () => {
@@ -174,8 +176,9 @@ export default function LiveChatWidget() {
       {/* Live Chat Button */}
       <button
         onClick={handleChatClick}
-        className="fixed bottom-6 right-6 bg-transparent hover:bg-gray-50 transition-colors z-40 flex flex-col items-center space-y-1 p-2 rounded-lg"
+        className="fixed bottom-6 right-6 bg-transparent hover:bg-gray-50 transition-colors z-[9999] flex flex-col items-center space-y-1 p-2 rounded-lg cursor-pointer"
         data-testid="button-live-chat"
+        style={{ pointerEvents: 'auto' }}
       >
         {/* Speech bubble icon with three dots */}
         <div className="relative bg-white rounded-full p-3 shadow-lg">
