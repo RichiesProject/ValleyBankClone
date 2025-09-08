@@ -420,7 +420,10 @@ export default function Dashboard() {
                     <div 
                       key={account.id}
                       className="p-6 hover:bg-gray-50 transition-all duration-200 cursor-pointer group"
-                      onClick={() => setSelectedAccount(account.id)}
+                      onClick={() => {
+                        setSelectedAccount(account.id);
+                        setIsAccountDetailOpen(true);
+                      }}
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
@@ -468,7 +471,10 @@ export default function Dashboard() {
                       <div 
                         key={account.id}
                         className="p-6 hover:bg-gray-50 transition-all duration-200 cursor-pointer group"
-                        onClick={() => setSelectedAccount(account.id)}
+                        onClick={() => {
+                        setSelectedAccount(account.id);
+                        setIsAccountDetailOpen(true);
+                      }}
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-4">
@@ -624,6 +630,88 @@ export default function Dashboard() {
             </div>
           </CardContent>
         </Card>
+        
+        {/* Account Detail Dialog */}
+        <Dialog open={isAccountDetailOpen} onOpenChange={setIsAccountDetailOpen}>
+          <DialogContent className="sm:max-w-lg">
+            <DialogHeader>
+              <DialogTitle>Account Details</DialogTitle>
+            </DialogHeader>
+            {selectedAccount && (() => {
+              const account = accounts.find(a => a.id === selectedAccount);
+              const accountTransactions = transactions.filter(t => t.accountId === selectedAccount);
+              
+              if (!account) return null;
+              
+              return (
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                    <div className="p-3 rounded-full bg-white shadow-sm border">
+                      {getAccountTypeIcon(account.accountType)}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-lg">{account.accountName}</h3>
+                      <p className="text-gray-600">{account.accountNumber}</p>
+                      <p className="text-2xl font-bold text-green-600 mt-1">
+                        {formatCurrency(account.balance)}
+                      </p>
+                      {(account.accountType === 'credit' || account.accountType === 'business_credit') && (
+                        <p className="text-sm text-gray-600">
+                          Available: {formatCurrency(account.availableBalance)}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-medium mb-3">Recent Transactions</h4>
+                    <div className="space-y-2 max-h-64 overflow-y-auto">
+                      {accountTransactions.length > 0 ? (
+                        accountTransactions.slice(0, 5).map((transaction) => (
+                          <div key={transaction.id} className="flex items-center justify-between p-3 border rounded-lg">
+                            <div className="flex items-center space-x-3">
+                              <div className={`p-2 rounded-full ${
+                                transaction.type === 'credit' 
+                                  ? 'bg-green-100 text-green-600' 
+                                  : 'bg-red-100 text-red-600'
+                              }`}>
+                                {getTransactionIcon(transaction.type)}
+                              </div>
+                              <div>
+                                <p className="font-medium text-sm">{transaction.description}</p>
+                                <p className="text-xs text-gray-500">{formatDate(transaction.date)}</p>
+                              </div>
+                            </div>
+                            <div className="text-right">
+                              <p className={`font-bold text-sm ${
+                                transaction.type === 'credit' ? 'text-green-600' : 'text-red-600'
+                              }`}>
+                                {transaction.type === 'credit' ? '+' : '-'}{formatCurrency(transaction.amount)}
+                              </p>
+                            </div>
+                          </div>
+                        ))
+                      ) : (
+                        <p className="text-gray-500 text-center py-4">No recent transactions</p>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="flex space-x-2">
+                    <Button variant="outline" className="flex-1">
+                      <Eye className="h-4 w-4 mr-2" />
+                      View All Transactions
+                    </Button>
+                    <Button variant="outline" className="flex-1">
+                      <Receipt className="h-4 w-4 mr-2" />
+                      Download Statement
+                    </Button>
+                  </div>
+                </div>
+              );
+            })()}
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );
