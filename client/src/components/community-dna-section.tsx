@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import ryanDempsterImage from "@assets/generated_images/Professional_CEO_headshot_portrait_5d03bf9d.png";
 
 export default function CommunityDnaSection() {
   const ref = useRef(null);
@@ -69,7 +68,7 @@ export default function CommunityDnaSection() {
           data-testid="ceo-profile"
         >
           <img 
-            src={ryanDempsterImage}
+            src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653f05ca6fbd1f7f7bf7f06d_ryan-dempster.jpeg"
             alt="Ryan Dempster, President and CEO"
             className="w-16 h-16 rounded-full object-cover border-2 border-white/20"
           />
