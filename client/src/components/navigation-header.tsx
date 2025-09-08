@@ -289,7 +289,7 @@ export default function NavigationHeader() {
                         size="sm"
                         className="bg-slate-800 hover:bg-slate-700 text-white w-full text-xs py-2"
                         onClick={() => {
-                          window.open('https://wvbk.ebanking-services.com/Enrollment/Agreement.aspx', '_blank');
+                          window.open('https://web15.secureinternetbank.com/PBI_PBI1151/enroll/123206859', '_blank');
                         }}
                       >
                         Enroll Now
