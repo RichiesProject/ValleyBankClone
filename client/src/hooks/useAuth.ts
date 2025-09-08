@@ -48,6 +48,10 @@ export function useAuth() {
     onSuccess: (data) => {
       queryClient.setQueryData(['/api/auth/me'], data);
       queryClient.invalidateQueries({ queryKey: ['/api/auth/me'] });
+      // Force redirect to dashboard
+      setTimeout(() => {
+        window.location.href = '/dashboard';
+      }, 100);
     },
   });
 
