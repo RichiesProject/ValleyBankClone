@@ -2,11 +2,11 @@ export default function MobileAppSection() {
   return (
     <div className="bg-gray-50 py-6" data-testid="mobile-app-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center space-x-6">
-          <h3 className="text-lg font-semibold text-primary" data-testid="text-mobile-app-title">
+        <div className="flex flex-row items-center justify-center space-x-4 sm:space-x-6 lg:space-x-8 xl:space-x-10">
+          <h3 className="text-lg sm:text-xl lg:text-xl font-semibold text-primary whitespace-nowrap" data-testid="text-mobile-app-title">
             Bank on the go with our Mobile App!
           </h3>
-          <div className="flex space-x-4">
+          <div className="flex flex-row space-x-2 sm:space-x-4">
             <a 
               href="https://itunes.apple.com/us/app/willamette-valley-bank-mobile/id1133122347?mt=8" 
               className="float-on-hover"
