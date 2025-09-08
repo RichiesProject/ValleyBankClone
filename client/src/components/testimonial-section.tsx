@@ -38,7 +38,7 @@ export default function TestimonialSection() {
             </div>
             <div className="flex justify-center lg:justify-start">
               <img 
-                src="/bank-award-sign.png"
+                src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b9d07c37f26e549c64b2aa_66b64d085e84150bd3a56016_IMG_4636.jpg"
                 alt="Willamette Valley Bank - No. 1 Community Bank Award Sign" 
                 className="w-full max-w-md h-auto"
                 data-testid="img-award-sign"
