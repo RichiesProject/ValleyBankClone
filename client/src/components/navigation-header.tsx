@@ -234,7 +234,7 @@ export default function NavigationHeader() {
                 </div>
               </div>
             </div>
-            <a href="#" className="hover:text-gray-300 transition-colors" data-testid="link-locations">
+            <a href="https://www.willamettevalleybank.com/locations" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors" data-testid="link-locations">
               Locations
             </a>
           </nav>
