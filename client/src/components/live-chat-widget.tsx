@@ -172,15 +172,29 @@ export default function LiveChatWidget() {
       )}
 
       {/* Live Chat Button - Bank Style */}
-      <img
-        id="liveHelpIcon"
-        alt="start chat"
+      <div
         onClick={handleChatClick}
-        className="fixed bottom-6 right-6 cursor-pointer hover:opacity-80 transition-opacity z-[9999]"
-        style={{ height: '60px', width: '60px' }}
-        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' width='60' height='60'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232563eb'/%3E%3Cstop offset='100%25' stop-color='%231d4ed8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='30' cy='30' r='28' fill='url(%23grad)' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M18 24c0-3 2-6 5-8 3-2 7-3 11-3s8 1 11 3c3 2 5 5 5 8v8c0 3-2 6-5 8-1.5 1-3.5 2-5.5 2.5l-3 3c-0.5 0.5-1.5 0.5-2 0l-3-3c-2-0.5-4-1.5-5.5-2.5-3-2-5-5-5-8v-8z' fill='%23fff'/%3E%3Ccircle cx='24' cy='28' r='2' fill='%232563eb'/%3E%3Ccircle cx='30' cy='28' r='2' fill='%232563eb'/%3E%3Ccircle cx='36' cy='28' r='2' fill='%232563eb'/%3E%3C/svg%3E"
+        className="fixed bottom-6 right-6 cursor-pointer hover:opacity-90 transition-opacity z-[9999] flex flex-col items-center"
         data-testid="button-live-chat"
-      />
+      >
+        {/* Background container matching bank style */}
+        <div className="bg-gray-800 rounded-lg p-4 flex flex-col items-center shadow-lg">
+          {/* White speech bubble with dots */}
+          <div className="bg-white rounded-full w-12 h-8 flex items-center justify-center mb-2 shadow-sm">
+            <div className="flex space-x-1">
+              <div className="w-1.5 h-1.5 bg-gray-700 rounded-full"></div>
+              <div className="w-1.5 h-1.5 bg-gray-700 rounded-full"></div>
+              <div className="w-1.5 h-1.5 bg-gray-700 rounded-full"></div>
+            </div>
+          </div>
+          
+          {/* LIVE CHAT text */}
+          <div className="text-center">
+            <div className="text-cyan-400 text-xs font-bold tracking-wider">LIVE</div>
+            <div className="text-white text-xs font-bold tracking-wider">CHAT</div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
