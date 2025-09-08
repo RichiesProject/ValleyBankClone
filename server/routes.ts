@@ -33,6 +33,64 @@ export async function registerRoutes(app: Express): Promise<Server> {
   };
 
   // Auth routes
+  app.post('/api/auth/register', async (req, res) => {
+    try {
+      const { email, password, firstName, lastName, username } = req.body;
+      
+      if (!email || !password || !firstName || !lastName || !username) {
+        return res.status(400).json({ error: 'All fields are required' });
+      }
+
+      // Check if user already exists
+      const existingUser = await storage.getUserByEmail(email);
+      if (existingUser) {
+        return res.status(409).json({ error: 'User already exists with this email' });
+      }
+
+      // Hash password and create user
+      const hashedPassword = await bcrypt.hash(password, 10);
+      const user = await storage.createUser({
+        email,
+        password: hashedPassword,
+        firstName,
+        lastName,
+      });
+
+      // Create default accounts for new user
+      await storage.createAccount({
+        userId: user.id,
+        accountNumber: `****${Math.floor(1000 + Math.random() * 9000)}`,
+        accountType: "checking",
+        accountName: "Premier Checking",
+        balance: "0.00",
+        availableBalance: "0.00",
+      });
+
+      await storage.createAccount({
+        userId: user.id,
+        accountNumber: `****${Math.floor(1000 + Math.random() * 9000)}`,
+        accountType: "savings",
+        accountName: "High Yield Savings", 
+        balance: "0.00",
+        availableBalance: "0.00",
+      });
+
+      // Log user in automatically after registration
+      req.session.userId = user.id;
+      res.json({ 
+        user: { 
+          id: user.id, 
+          email: user.email, 
+          firstName: user.firstName, 
+          lastName: user.lastName 
+        } 
+      });
+    } catch (error) {
+      console.error('Registration error:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+
   app.post('/api/auth/login', async (req, res) => {
     try {
       const { email, password } = req.body;
