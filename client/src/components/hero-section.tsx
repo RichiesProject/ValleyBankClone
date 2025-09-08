@@ -75,11 +75,11 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Right bottom - Family cooking together */}
+          {/* Right bottom - Happy father and daughter */}
           <div className="absolute right-32 bottom-16 w-64 h-48 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-              alt="Family cooking together in kitchen" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66e8a8b3d2e4275477dfd8ef_happy-african-american-father-and-daughter-making-2023-11-27-05-07-56-utc.png" 
+              alt="Happy father and daughter cooking together" 
               className="w-full h-full object-cover"
               data-testid="img-kitchen-scene"
             />
