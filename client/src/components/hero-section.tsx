@@ -48,7 +48,7 @@ export default function HeroSection() {
           {/* Left bottom - Family with child in blue */}
           <div className="absolute left-32 bottom-16 w-64 h-64 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="https://images.unsplash.com/photo-1511895426328-dc8714aecd7" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66eb3eae5bb23131069a0a46_AdobeStock_388021466%20(1)-p-1080.png" 
               alt="Happy family with child in blue" 
               className="w-full h-full object-cover"
               data-testid="img-family-child"
