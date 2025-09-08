@@ -74,7 +74,7 @@ export default function PrivacyConsent() {
       {/* Floating Cookie Icon */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-slate-800 hover:bg-slate-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 hover:scale-110"
+        className="fixed bottom-6 left-6 bg-slate-800 hover:bg-slate-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 hover:scale-110"
         data-testid="button-privacy-consent"
         aria-label="Privacy settings"
       >
