@@ -70,24 +70,65 @@ export default function NavigationHeader() {
                 <span>Personal</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-              {/* Personal dropdown menu */}
-              <div className="absolute top-full left-0 mt-2 w-80 bg-white text-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-4">
-                  <div className="px-4 py-2 font-semibold text-slate-600 border-b">Banking</div>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-personal-checking">Personal Checking</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-personal-savings">Personal Savings</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-cds">Certificates of Deposit</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-online-banking">Online Banking</a>
-                  
-                  <div className="px-4 py-2 font-semibold text-slate-600 border-b border-t mt-2">Lending</div>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-home-loans">Home Loans</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-refinancing">Refinancing</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-personal-loans">Personal Loans</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-auto-loans">Auto Loans</a>
-                  
-                  <div className="px-4 py-2 font-semibold text-slate-600 border-b border-t mt-2">Investment Services</div>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-wealth-management">Wealth Management</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-retirement-planning">Retirement Planning</a>
+              {/* Personal dropdown menu - Megamenu Design */}
+              <div className="absolute top-full left-0 mt-2 w-[800px] bg-white text-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="p-6">
+                  <div className="grid grid-cols-3 gap-8">
+                    {/* Banking Section */}
+                    <div>
+                      <h3 className="font-semibold text-slate-700 mb-4 text-lg">Banking</h3>
+                      <div className="space-y-1">
+                        <a href="/personal-checking" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-personal-checking">
+                          Personal Checking
+                        </a>
+                        <a href="/personal-savings" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-personal-savings">
+                          Personal Savings
+                        </a>
+                        <a href="/personal-banking" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-personal-banking">
+                          Personal Banking
+                        </a>
+                        <a href="/personal-credit-cards" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-personal-credit-cards">
+                          Personal Credit Cards
+                        </a>
+                      </div>
+                    </div>
+                    
+                    {/* Loans Section */}
+                    <div>
+                      <h3 className="font-semibold text-slate-700 mb-4 text-lg">Loans</h3>
+                      <div className="space-y-1">
+                        <a href="/home-loans" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-home-loans">
+                          Home Loans
+                        </a>
+                        <a href="/home-loan-centers" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-home-loan-centers">
+                          Home Loan Centers
+                        </a>
+                        <a href="/home-loan-questions" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-home-loan-questions">
+                          Home Loan Questions
+                        </a>
+                      </div>
+                    </div>
+                    
+                    {/* Promotional Section */}
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <div className="mb-3">
+                        <img 
+                          src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                          alt="Modern home exterior" 
+                          className="w-full h-16 object-cover rounded"
+                          data-testid="img-home-loan-promo"
+                        />
+                      </div>
+                      <h4 className="font-semibold text-slate-800 mb-2">Apply for a Home Loan Today</h4>
+                      <a 
+                        href="/home-loans" 
+                        className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors"
+                        data-testid="link-apply-now"
+                      >
+                        Apply Now →
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
