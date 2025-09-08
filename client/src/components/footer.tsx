@@ -75,7 +75,7 @@ export default function Footer() {
               <a href="https://www.willamettevalleybank.com/about-us/news" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-news">
                 News
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-education">
+              <a href="https://www.willamettevalleybank.com/education" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-education">
                 Education
               </a>
               <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-faqs">
