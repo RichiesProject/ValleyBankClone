@@ -41,7 +41,7 @@ export default function Footer() {
               <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-linkedin">
+              <a href="https://www.linkedin.com/company/willamette-valley-bank" className="text-gray-300 hover:text-white gentle-float" data-testid="link-linkedin">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-google">
