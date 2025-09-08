@@ -1,6 +1,6 @@
 import { ChevronDown, Building2 } from 'lucide-react';
 import { useState } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
@@ -234,33 +234,35 @@ export default function NavigationHeader() {
                   <ChevronDown className="w-4 h-4" />
                 </button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[800px] p-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              <DialogContent className="sm:max-w-[700px] p-0">
+                <DialogDescription className="sr-only">Login to your online banking account</DialogDescription>
+                <div className="grid grid-cols-2 gap-0">
                   {/* Left Side - Online Banking Login */}
-                  <div className="p-6 border-r">
-                    <DialogHeader className="mb-6">
-                      <DialogTitle className="text-xl font-semibold text-gray-800">Online Banking Login</DialogTitle>
+                  <div className="p-4 border-r">
+                    <DialogHeader className="mb-4">
+                      <DialogTitle className="text-base font-semibold text-gray-800">Online Banking Login</DialogTitle>
                     </DialogHeader>
                     
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                       <RadioGroup 
                         value={loginType} 
                         onValueChange={setLoginType}
-                        className="flex gap-6"
+                        className="flex gap-4"
                       >
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-1">
                           <RadioGroupItem value="personal" id="personal" />
-                          <Label htmlFor="personal" className="text-sm">Personal & Small Business</Label>
+                          <Label htmlFor="personal" className="text-xs">Personal & Small Business</Label>
                         </div>
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-1">
                           <RadioGroupItem value="corporate" id="corporate" />
-                          <Label htmlFor="corporate" className="text-sm">Corporate</Label>
+                          <Label htmlFor="corporate" className="text-xs">Corporate</Label>
                         </div>
                       </RadioGroup>
                       
-                      <div className="flex gap-3 mt-6">
+                      <div className="flex gap-2 mt-4">
                         <Button 
-                          className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-2"
+                          size="sm"
+                          className="bg-slate-800 hover:bg-slate-700 text-white px-4 py-1 text-xs"
                           onClick={() => {
                             if (loginType === 'personal') {
                               window.open('https://wvbk.ebanking-services.com/LOGIN/Login.aspx', '_blank');
@@ -273,7 +275,8 @@ export default function NavigationHeader() {
                         </Button>
                         <Button 
                           variant="outline" 
-                          className="text-slate-600 border-slate-300 hover:bg-gray-50"
+                          size="sm"
+                          className="text-slate-600 border-slate-300 hover:bg-gray-50 px-3 py-1 text-xs"
                           onClick={() => {
                             window.open('https://wvbk.ebanking-services.com/LOGIN/ForgotPassword.aspx', '_blank');
                           }}
@@ -285,17 +288,15 @@ export default function NavigationHeader() {
                   </div>
                   
                   {/* Right Side - Register */}
-                  <div className="p-6">
-                    <DialogHeader className="mb-6">
-                      <DialogTitle className="text-xl font-semibold text-gray-800">Register for online account access</DialogTitle>
+                  <div className="p-4">
+                    <DialogHeader className="mb-4">
+                      <DialogTitle className="text-base font-semibold text-gray-800">Register for online account access</DialogTitle>
                     </DialogHeader>
                     
-                    <div className="space-y-4">
-                      <p className="text-sm text-gray-600 mb-4">
-                        New to online banking? Get secure access to your accounts 24/7.
-                      </p>
+                    <div className="space-y-3">
                       <Button 
-                        className="bg-blue-600 hover:bg-blue-700 text-white w-full"
+                        size="sm"
+                        className="bg-slate-800 hover:bg-slate-700 text-white w-full text-xs py-2"
                         onClick={() => {
                           window.open('https://wvbk.ebanking-services.com/Enrollment/Agreement.aspx', '_blank');
                         }}
