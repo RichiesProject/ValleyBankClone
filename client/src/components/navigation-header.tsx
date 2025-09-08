@@ -1,14 +1,11 @@
 import { ChevronDown, Building2 } from 'lucide-react';
 import { useState } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 
 export default function NavigationHeader() {
   const [loginType, setLoginType] = useState('personal');
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [isAccountOpen, setIsAccountOpen] = useState(false);
 
   const handleOpenAccount = () => {
     // Redirect to the account opening flow
@@ -226,22 +223,18 @@ export default function NavigationHeader() {
           
           {/* Right side - Login and Open Account with lots of space */}
           <div className="flex items-center space-x-3 ml-auto">
-            {/* Login Modal */}
-            <Dialog open={isLoginOpen} onOpenChange={setIsLoginOpen}>
-              <DialogTrigger asChild>
-                <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors text-base" data-testid="button-login">
-                  <span>Login</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[700px] p-0">
-                <DialogDescription className="sr-only">Login to your online banking account</DialogDescription>
+            {/* Login Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center space-x-1 hover:text-gray-300 transition-colors text-base" data-testid="button-login">
+                <span>Login</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              {/* Login dropdown menu */}
+              <div className="absolute top-full right-0 mt-2 w-[700px] bg-white text-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="grid grid-cols-2 gap-0">
                   {/* Left Side - Online Banking Login */}
                   <div className="p-4 border-r">
-                    <DialogHeader className="mb-4">
-                      <DialogTitle className="text-base font-semibold text-gray-800">Online Banking Login</DialogTitle>
-                    </DialogHeader>
+                    <h3 className="text-base font-semibold text-gray-800 mb-4">Online Banking Login</h3>
                     
                     <div className="space-y-3">
                       <RadioGroup 
@@ -289,9 +282,7 @@ export default function NavigationHeader() {
                   
                   {/* Right Side - Register */}
                   <div className="p-4">
-                    <DialogHeader className="mb-4">
-                      <DialogTitle className="text-base font-semibold text-gray-800">Register for online account access</DialogTitle>
-                    </DialogHeader>
+                    <h3 className="text-base font-semibold text-gray-800 mb-4">Register for online account access</h3>
                     
                     <div className="space-y-3">
                       <Button 
@@ -306,8 +297,8 @@ export default function NavigationHeader() {
                     </div>
                   </div>
                 </div>
-              </DialogContent>
-            </Dialog>
+              </div>
+            </div>
             
             {/* Open Account Button */}
             <button 
