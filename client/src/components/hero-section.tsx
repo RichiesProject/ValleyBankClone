@@ -28,7 +28,7 @@ export default function HeroSection() {
           {/* Far left - Person with skis in winter forest */}
           <div className="absolute left-0 top-16 w-24 h-80 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
             <img 
-              src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66e8a7ee841fdd36d4077c87_AdobeStock_326565831.png" 
               alt="Person with skis in winter forest" 
               className="w-full h-full object-cover"
               data-testid="img-winter-skier"
