@@ -8,12 +8,15 @@ export default function HeroSection() {
             Where Local Means Everything
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              className="bg-white text-slate-800 px-8 py-3 rounded font-medium hover:bg-gray-100 hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+            <a 
+              href="https://www.willamettevalleybank.com/community-banking"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-slate-800 px-8 py-3 rounded font-medium hover:bg-gray-100 hover:-translate-y-2 hover:shadow-lg transition-all duration-300 inline-block text-center"
               data-testid="button-community-banking"
             >
               Community Banking
-            </button>
+            </a>
             <button 
               className="bg-slate-700 text-white px-8 py-3 rounded font-medium hover:bg-slate-600 hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
               data-testid="button-home-loan-journeys"
