@@ -12,6 +12,12 @@ import PersonalCreditCards from "@/pages/personal-credit-cards";
 import HomeLoans from "@/pages/home-loans";
 import HomeLoanCenters from "@/pages/home-loan-centers";
 import HomeLoanQuestions from "@/pages/home-loan-questions";
+import BusinessChecking from "@/pages/business-checking";
+import BusinessSavings from "@/pages/business-savings";
+import BusinessCreditCards from "@/pages/business-credit-cards";
+import BusinessLoans from "@/pages/business-loans";
+import CommercialLenders from "@/pages/commercial-lenders";
+import CommercialLenderCenters from "@/pages/commercial-lender-centers";
 import LiveChatWidget from "@/components/live-chat-widget";
 import PrivacyConsent from "@/components/privacy-consent";
 
@@ -26,6 +32,12 @@ function Router() {
       <Route path="/home-loans" component={HomeLoans} />
       <Route path="/home-loan-centers" component={HomeLoanCenters} />
       <Route path="/home-loan-questions" component={HomeLoanQuestions} />
+      <Route path="/business-checking" component={BusinessChecking} />
+      <Route path="/business-savings" component={BusinessSavings} />
+      <Route path="/business-credit-cards" component={BusinessCreditCards} />
+      <Route path="/business-loans" component={BusinessLoans} />
+      <Route path="/commercial-lenders" component={CommercialLenders} />
+      <Route path="/commercial-lender-centers" component={CommercialLenderCenters} />
       <Route component={NotFound} />
     </Switch>
   );
