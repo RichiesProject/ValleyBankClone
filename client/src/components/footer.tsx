@@ -134,11 +134,23 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section - matching screenshot */}
-        <div className="border-t border-gray-700 mt-12 pt-6">
-          <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-            {/* Left - Equal Housing Lender Logo */}
-            <div className="flex items-center">
-              <div className="w-12 h-12 bg-white rounded flex items-center justify-center mr-3">
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between space-y-6 lg:space-y-0">
+            {/* Left - FDIC Section */}
+            <div className="flex items-start space-x-6">
+              <div className="flex flex-col items-center">
+                <div className="bg-white text-primary px-3 py-1 rounded text-xs font-bold mb-1">
+                  FDIC
+                </div>
+                <p className="text-xs text-gray-300 text-center max-w-xs" data-testid="text-fdic-insured">
+                  FDIC Insured - Backed by the full faith and credit of the<br />U.S. Government
+                </p>
+              </div>
+            </div>
+
+            {/* Right - Equal Housing Lender Logo + Links */}
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-white rounded flex items-center justify-center mr-4">
                 {/* Equal Housing Lender Logo */}
                 <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="24" height="24" fill="#000000"/>
@@ -148,26 +160,40 @@ export default function Footer() {
                   <text x="12" y="25" textAnchor="middle" fontSize="2" fill="white">LENDER</text>
                 </svg>
               </div>
+              
+              <div className="flex space-x-4 text-xs">
+                <a href="#" className="text-gray-300 hover:text-white transition-colors" data-testid="link-privacy-policy">
+                  Privacy Policy
+                </a>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors" data-testid="link-disclosures">
+                  Disclosures
+                </a>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors" data-testid="link-accessibility">
+                  Accessibility
+                </a>
+              </div>
+              
+              <div className="text-xs text-gray-300 ml-4">
+                <span>Website by: </span>
+                <span className="font-bold italic" style={{fontFamily: 'serif'}} data-testid="text-farewell">farewell</span>
+              </div>
             </div>
+          </div>
 
-            {/* Center - Links */}
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors" data-testid="link-privacy-policy">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors" data-testid="link-disclosures">
-                Disclosures
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors" data-testid="link-accessibility">
-                Accessibility
-              </a>
-            </div>
-
-            {/* Right - Website by */}
-            <div className="text-sm text-gray-300">
-              <span>Website by: </span>
-              <span className="font-bold italic" style={{fontFamily: 'serif'}} data-testid="text-farewell">farewell</span>
-            </div>
+          {/* Legal disclaimer */}
+          <div className="mt-6 text-xs text-gray-400 space-y-1">
+            <p data-testid="text-legal-disclaimer">
+              This is not a commitment to lend as products are subject to credit approval.
+            </p>
+            <p data-testid="text-terms">
+              Terms subject to change without notice.
+            </p>
+            <p data-testid="text-routing-number">
+              Routing Number - 123206859
+            </p>
+            <p data-testid="text-copyright">
+              © Willamette Valley Bank NMLS# 713109. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
