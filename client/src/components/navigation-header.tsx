@@ -49,19 +49,64 @@ export default function NavigationHeader() {
                 <ChevronDown className="w-4 h-4" />
               </button>
               {/* Business dropdown menu */}
-              <div className="absolute top-full left-0 mt-2 w-80 bg-white text-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-4">
-                  <div className="px-4 py-2 font-semibold text-slate-600 border-b">Banking Services</div>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-business-checking">Business Checking</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-business-savings">Business Savings</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-merchant-services">Merchant Services</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-treasury-management">Treasury Management</a>
-                  
-                  <div className="px-4 py-2 font-semibold text-slate-600 border-b border-t mt-2">Lending</div>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-business-loans">Business Loans</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-equipment-financing">Equipment Financing</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-commercial-real-estate">Commercial Real Estate</a>
-                  <a href="#" className="block px-4 py-3 hover:bg-gray-100 transition-colors" data-testid="link-sba-loans">SBA Loans</a>
+              <div className="absolute top-full left-0 mt-2 w-96 bg-white text-slate-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="p-6">
+                  <div className="grid grid-cols-2 gap-6">
+                    {/* Left Column - Banking Services */}
+                    <div>
+                      <h3 className="font-semibold text-slate-700 mb-4 text-base border-b pb-2">Banking</h3>
+                      <div className="space-y-1">
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-checking">Business Checking</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-savings">Business Savings</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-credit-cards">Business Credit Cards</a>
+                      </div>
+                      
+                      <h3 className="font-semibold text-slate-700 mb-4 mt-6 text-base border-b pb-2">Banking Services</h3>
+                      <div className="space-y-1">
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-checking-2">Business Checking</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-savings-2">Business Savings</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-merchant-services">Merchant Services</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-treasury-management">Treasury Management</a>
+                      </div>
+                    </div>
+                    
+                    {/* Right Column - Loans & Promotional */}
+                    <div>
+                      <h3 className="font-semibold text-slate-700 mb-4 text-base border-b pb-2">Loans</h3>
+                      <div className="space-y-1 mb-6">
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-loans">Business Loans</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-locate-commercial-lender">Locate a Commercial Lender</a>
+                      </div>
+                      
+                      <h3 className="font-semibold text-slate-700 mb-4 text-base border-b pb-2">Lending</h3>
+                      <div className="space-y-1 mb-6">
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-business-loans-2">Business Loans</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-equipment-financing">Equipment Financing</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-commercial-real-estate">Commercial Real Estate</a>
+                        <a href="#" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors text-sm" data-testid="link-sba-loans">SBA Loans</a>
+                      </div>
+                      
+                      {/* Promotional Section */}
+                      <div className="bg-gray-50 rounded-lg p-4">
+                        <div className="mb-3">
+                          <img 
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                            alt="Business team meeting" 
+                            className="w-full h-16 object-cover rounded"
+                            data-testid="img-business-loan-promo"
+                          />
+                        </div>
+                        <h4 className="font-semibold text-slate-800 mb-2 text-sm">Apply for a Business Loan Today</h4>
+                        <a 
+                          href="#" 
+                          className="inline-flex items-center text-blue-600 hover:text-blue-700 text-xs font-medium transition-colors"
+                          data-testid="link-learn-more-business"
+                        >
+                          Learn More →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
