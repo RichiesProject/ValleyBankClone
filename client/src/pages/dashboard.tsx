@@ -4,6 +4,11 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useToast } from '@/hooks/use-toast';
 import { 
   CreditCard, 
   DollarSign, 
@@ -14,7 +19,11 @@ import {
   Settings,
   LogOut,
   Send,
-  Plus
+  Plus,
+  Eye,
+  Camera,
+  Receipt,
+  User
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -41,6 +50,12 @@ interface Transaction {
 export default function Dashboard() {
   const { user, logout } = useAuth();
   const [selectedAccount, setSelectedAccount] = useState<string | null>(null);
+  const [isTransferOpen, setIsTransferOpen] = useState(false);
+  const [isDepositOpen, setIsDepositOpen] = useState(false);
+  const [isPayBillsOpen, setIsPayBillsOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isAccountDetailOpen, setIsAccountDetailOpen] = useState(false);
+  const { toast } = useToast();
 
   const { data: accountsData } = useQuery({
     queryKey: ['/api/accounts'],
@@ -141,34 +156,251 @@ export default function Dashboard() {
 
         {/* Quick Actions */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <Button 
-            className="flex items-center justify-center h-20 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
-            data-testid="button-transfer"
-          >
-            <Send className="h-6 w-6 mr-3" />
-            Transfer Money
-          </Button>
-          <Button 
-            className="flex items-center justify-center h-20 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
-            data-testid="button-deposit"
-          >
-            <Plus className="h-6 w-6 mr-3" />
-            Deposit Check
-          </Button>
-          <Button 
-            className="flex items-center justify-center h-20 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
-            data-testid="button-pay-bills"
-          >
-            <CreditCard className="h-6 w-6 mr-3" />
-            Pay Bills
-          </Button>
-          <Button 
-            className="flex items-center justify-center h-20 bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
-            data-testid="button-settings"
-          >
-            <Settings className="h-6 w-6 mr-3" />
-            Account Settings
-          </Button>
+          <Dialog open={isTransferOpen} onOpenChange={setIsTransferOpen}>
+            <DialogTrigger asChild>
+              <Button 
+                className="flex items-center justify-center h-20 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
+                data-testid="button-transfer"
+              >
+                <Send className="h-6 w-6 mr-3" />
+                Transfer Money
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle>Transfer Money</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="from-account">From Account</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select account" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {accounts.filter(a => a.accountType !== 'credit' && !a.accountType.includes('credit')).map(account => (
+                        <SelectItem key={account.id} value={account.id}>
+                          {account.accountName} - {account.accountNumber}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <Label htmlFor="to-account">To Account</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select account" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {accounts.map(account => (
+                        <SelectItem key={account.id} value={account.id}>
+                          {account.accountName} - {account.accountNumber}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <Label htmlFor="amount">Amount</Label>
+                  <Input id="amount" type="number" placeholder="$0.00" step="0.01" />
+                </div>
+                <div>
+                  <Label htmlFor="memo">Memo (Optional)</Label>
+                  <Input id="memo" placeholder="What's this transfer for?" />
+                </div>
+                <Button 
+                  className="w-full" 
+                  onClick={() => {
+                    toast({ title: 'Transfer Initiated', description: 'Your transfer has been processed successfully' });
+                    setIsTransferOpen(false);
+                  }}
+                >
+                  Transfer Now
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
+          <Dialog open={isDepositOpen} onOpenChange={setIsDepositOpen}>
+            <DialogTrigger asChild>
+              <Button 
+                className="flex items-center justify-center h-20 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
+                data-testid="button-deposit"
+              >
+                <Plus className="h-6 w-6 mr-3" />
+                Deposit Check
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle>Mobile Check Deposit</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="deposit-account">Deposit To</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select account" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {accounts.filter(a => a.accountType === 'checking' || a.accountType === 'business_checking' || a.accountType === 'savings' || a.accountType === 'business_savings').map(account => (
+                        <SelectItem key={account.id} value={account.id}>
+                          {account.accountName} - {account.accountNumber}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <Label htmlFor="check-amount">Check Amount</Label>
+                  <Input id="check-amount" type="number" placeholder="$0.00" step="0.01" />
+                </div>
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                  <Camera className="h-12 w-12 mx-auto text-gray-400 mb-4" />
+                  <p className="text-gray-600 mb-2">Take photos of your check</p>
+                  <p className="text-sm text-gray-500">Front and back required</p>
+                  <Button variant="outline" className="mt-4">
+                    <Camera className="h-4 w-4 mr-2" />
+                    Capture Check Images
+                  </Button>
+                </div>
+                <Button 
+                  className="w-full" 
+                  onClick={() => {
+                    toast({ title: 'Check Deposited', description: 'Your check deposit has been submitted for processing' });
+                    setIsDepositOpen(false);
+                  }}
+                >
+                  Submit Deposit
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
+          <Dialog open={isPayBillsOpen} onOpenChange={setIsPayBillsOpen}>
+            <DialogTrigger asChild>
+              <Button 
+                className="flex items-center justify-center h-20 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
+                data-testid="button-pay-bills"
+              >
+                <Receipt className="h-6 w-6 mr-3" />
+                Pay Bills
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle>Pay Bills</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="payee">Payee</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select or add payee" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="electric">City Electric Company</SelectItem>
+                      <SelectItem value="gas">Northwest Natural Gas</SelectItem>
+                      <SelectItem value="phone">Verizon Wireless</SelectItem>
+                      <SelectItem value="credit">Chase Credit Card</SelectItem>
+                      <SelectItem value="mortgage">Wells Fargo Mortgage</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <Label htmlFor="payment-account">Pay From</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select account" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {accounts.filter(a => a.accountType === 'checking' || a.accountType === 'business_checking').map(account => (
+                        <SelectItem key={account.id} value={account.id}>
+                          {account.accountName} - {account.accountNumber}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <Label htmlFor="payment-amount">Amount</Label>
+                  <Input id="payment-amount" type="number" placeholder="$0.00" step="0.01" />
+                </div>
+                <div>
+                  <Label htmlFor="payment-date">Payment Date</Label>
+                  <Input id="payment-date" type="date" />
+                </div>
+                <Button 
+                  className="w-full" 
+                  onClick={() => {
+                    toast({ title: 'Payment Scheduled', description: 'Your bill payment has been scheduled successfully' });
+                    setIsPayBillsOpen(false);
+                  }}
+                >
+                  Schedule Payment
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
+          <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
+            <DialogTrigger asChild>
+              <Button 
+                className="flex items-center justify-center h-20 bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
+                data-testid="button-settings"
+              >
+                <Settings className="h-6 w-6 mr-3" />
+                Account Settings
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle>Account Settings</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-4">
+                <div className="space-y-3">
+                  <h4 className="font-medium">Profile Information</h4>
+                  <div>
+                    <Label htmlFor="settings-email">Email</Label>
+                    <Input id="settings-email" value={user?.firstName + ' ' + user?.lastName} disabled />
+                  </div>
+                  <div>
+                    <Label htmlFor="settings-phone">Phone Number</Label>
+                    <Input id="settings-phone" placeholder="(555) 123-4567" />
+                  </div>
+                </div>
+                <Separator />
+                <div className="space-y-3">
+                  <h4 className="font-medium">Security</h4>
+                  <Button variant="outline" className="w-full justify-start">
+                    <User className="h-4 w-4 mr-2" />
+                    Change Password
+                  </Button>
+                  <Button variant="outline" className="w-full justify-start">
+                    <Settings className="h-4 w-4 mr-2" />
+                    Two-Factor Authentication
+                  </Button>
+                </div>
+                <Separator />
+                <div className="space-y-3">
+                  <h4 className="font-medium">Preferences</h4>
+                  <Button variant="outline" className="w-full justify-start">
+                    Notification Settings
+                  </Button>
+                  <Button variant="outline" className="w-full justify-start">
+                    Statement Preferences
+                  </Button>
+                </div>
+                <Button 
+                  className="w-full" 
+                  onClick={() => {
+                    toast({ title: 'Settings Updated', description: 'Your account settings have been saved' });
+                    setIsSettingsOpen(false);
+                  }}
+                >
+                  Save Changes
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
