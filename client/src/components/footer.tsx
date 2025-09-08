@@ -103,7 +103,7 @@ export default function Footer() {
               <a href="https://www.willamettevalleybank.com/personal/personal-digital-banking" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-personal-banking">
                 Personal Banking
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-personal-credit-cards">
+              <a href="https://www.willamettevalleybank.com/personal/personal-credit-cards" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-personal-credit-cards">
                 Personal Credit Cards
               </a>
               <a href="#" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-home-loans-footer">
