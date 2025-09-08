@@ -3,7 +3,10 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { useAuth } from "@/hooks/useAuth";
 import Home from "@/pages/home";
+import Login from "@/pages/login";
+import Dashboard from "@/pages/dashboard";
 import NotFound from "@/pages/not-found";
 import PersonalChecking from "@/pages/personal-checking";
 import PersonalSavings from "@/pages/personal-savings";
@@ -22,22 +25,51 @@ import LiveChatWidget from "@/components/live-chat-widget";
 import PrivacyConsent from "@/components/privacy-consent";
 
 function Router() {
+  const { isAuthenticated, isLoading } = useAuth();
+  
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <img 
+            src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/67d1faccda1c4e43dbff3d30_WVBK25Years_WebsiteHeader3-p-500.png"
+            alt="Willamette Valley Bank"
+            className="h-16 mx-auto mb-4"
+          />
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+  
+  if (!isAuthenticated) {
+    return (
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route path="/" component={Home} />
+        <Route path="/personal-checking" component={PersonalChecking} />
+        <Route path="/personal-savings" component={PersonalSavings} />
+        <Route path="/personal-banking" component={PersonalBanking} />
+        <Route path="/personal-credit-cards" component={PersonalCreditCards} />
+        <Route path="/home-loans" component={HomeLoans} />
+        <Route path="/home-loan-centers" component={HomeLoanCenters} />
+        <Route path="/home-loan-questions" component={HomeLoanQuestions} />
+        <Route path="/business-checking" component={BusinessChecking} />
+        <Route path="/business-savings" component={BusinessSavings} />
+        <Route path="/business-credit-cards" component={BusinessCreditCards} />
+        <Route path="/business-loans" component={BusinessLoans} />
+        <Route path="/commercial-lenders" component={CommercialLenders} />
+        <Route path="/commercial-lender-centers" component={CommercialLenderCenters} />
+        <Route component={NotFound} />
+      </Switch>
+    );
+  }
+  
+  // Authenticated routes
   return (
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/personal-checking" component={PersonalChecking} />
-      <Route path="/personal-savings" component={PersonalSavings} />
-      <Route path="/personal-banking" component={PersonalBanking} />
-      <Route path="/personal-credit-cards" component={PersonalCreditCards} />
-      <Route path="/home-loans" component={HomeLoans} />
-      <Route path="/home-loan-centers" component={HomeLoanCenters} />
-      <Route path="/home-loan-questions" component={HomeLoanQuestions} />
-      <Route path="/business-checking" component={BusinessChecking} />
-      <Route path="/business-savings" component={BusinessSavings} />
-      <Route path="/business-credit-cards" component={BusinessCreditCards} />
-      <Route path="/business-loans" component={BusinessLoans} />
-      <Route path="/commercial-lenders" component={CommercialLenders} />
-      <Route path="/commercial-lender-centers" component={CommercialLenderCenters} />
+      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/" component={Dashboard} />
       <Route component={NotFound} />
     </Switch>
   );

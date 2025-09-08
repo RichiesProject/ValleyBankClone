@@ -263,7 +263,7 @@ export default function NavigationHeader() {
                           size="sm"
                           className="bg-slate-800 hover:bg-slate-700 text-white px-4 py-1 text-xs"
                           onClick={() => {
-                            window.open('https://web15.secureinternetbank.com/PBI_PBI1151/Login/123206859', '_blank');
+                            window.location.href = '/login';
                           }}
                         >
                           Sign In
