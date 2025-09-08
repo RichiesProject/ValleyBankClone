@@ -1,3 +1,5 @@
+import mountainHikerImage from "@assets/Screenshot 2025-09-07 at 8.07.35 PM_1757290127537.png";
+
 export default function HeroSection() {
   return (
     <section className="bg-slate-800 text-white py-16 relative overflow-hidden" data-testid="hero-section">
@@ -58,7 +60,7 @@ export default function HeroSection() {
           {/* Large center mountain scene - Made even larger */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-[450px] h-[450px] rounded-lg overflow-hidden shadow-xl z-30">
             <img 
-              src="/attached_assets/Screenshot 2025-09-07 at 8.07.35 PM_1757290127537.png" 
+              src={mountainHikerImage} 
               alt="Mountain hiking trail with wildflowers and hiker" 
               className="w-full h-full object-cover"
               data-testid="img-mountain-hiker"
