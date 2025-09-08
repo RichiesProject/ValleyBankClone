@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Home } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -44,8 +44,8 @@ export default function Footer() {
               <a href="https://www.linkedin.com/company/willamette-valley-bank" className="text-gray-300 hover:text-white gentle-float" data-testid="link-linkedin">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-google">
-                <Mail className="w-5 h-5" />
+              <a href="https://www.zillow.com/lender-profile/WVBKhomeloans/" className="text-gray-300 hover:text-white gentle-float" data-testid="link-zillow">
+                <Home className="w-5 h-5" />
               </a>
             </div>
           </div>
