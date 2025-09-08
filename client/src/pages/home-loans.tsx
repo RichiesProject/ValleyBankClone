@@ -1,6 +1,5 @@
 import NavigationHeader from "@/components/navigation-header";
 import Footer from "@/components/footer";
-import ChatWidget from "@/components/chat-widget";
 
 export default function HomeLoans() {
   return (
@@ -76,7 +75,6 @@ export default function HomeLoans() {
         </div>
       </main>
       <Footer />
-      <ChatWidget />
     </div>
   );
 }

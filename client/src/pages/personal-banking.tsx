@@ -1,6 +1,5 @@
 import NavigationHeader from "@/components/navigation-header";
 import Footer from "@/components/footer";
-import ChatWidget from "@/components/chat-widget";
 
 export default function PersonalBanking() {
   return (
@@ -63,7 +62,6 @@ export default function PersonalBanking() {
         </div>
       </main>
       <Footer />
-      <ChatWidget />
     </div>
   );
 }

@@ -7,7 +7,6 @@ import HomeLoansSection from "@/components/home-loans-section";
 import FeaturesSection from "@/components/features-section";
 import CareersSection from "@/components/careers-section";
 import Footer from "@/components/footer";
-import ChatWidget from "@/components/chat-widget";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
       <FeaturesSection />
       <CareersSection />
       <Footer />
-      <ChatWidget />
     </div>
   );
 }

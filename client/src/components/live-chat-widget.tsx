@@ -12,9 +12,7 @@ export default function LiveChatWidget() {
   });
 
   const handleChatClick = () => {
-    console.log('Chat button clicked, current isOpen:', isOpen);
     setIsOpen(!isOpen);
-    console.log('Setting isOpen to:', !isOpen);
   };
 
   const handleStartChat = () => {
