@@ -1,4 +1,5 @@
-import mountainHikerImage from "@assets/Screenshot 2025-09-07 at 8.07.35 PM_1757290127537.png";
+// Using online placeholder until asset file can be accessed
+const mountainHikerImage = "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80";
 
 export default function HeroSection() {
   return (
