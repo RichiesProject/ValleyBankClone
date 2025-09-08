@@ -129,7 +129,7 @@ export default function NavigationHeader() {
                         <a href="/personal-savings" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-personal-savings">
                           Personal Savings
                         </a>
-                        <a href="/personal-banking" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-personal-banking">
+                        <a href="https://www.willamettevalleybank.com/personal/personal-digital-banking" target="_blank" rel="noopener noreferrer" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-personal-banking">
                           Personal Banking
                         </a>
                         <a href="/personal-credit-cards" className="block py-2 text-slate-600 hover:text-slate-800 hover:bg-gray-50 rounded px-2 transition-colors" data-testid="link-personal-credit-cards">
