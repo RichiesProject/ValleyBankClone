@@ -119,22 +119,22 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold tracking-wide" data-testid="text-business-title">BUSINESS</h3>
             <div className="space-y-2">
-              <a href="/business-checking" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-checking">
+              <a href="https://www.willamettevalleybank.com/business/business-checking" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-checking">
                 Business Checking
               </a>
-              <a href="/business-savings" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-savings">
+              <a href="https://www.willamettevalleybank.com/business/business-savings" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-savings">
                 Business Savings
               </a>
-              <a href="/business-credit-cards" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-credit-cards">
+              <a href="https://www.willamettevalleybank.com/business/business-credit-cards" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-credit-cards">
                 Business Credit Cards
               </a>
-              <a href="/business-loans" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-loans">
+              <a href="https://www.willamettevalleybank.com/business/commercial-loans" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-business-loans">
                 Business Loans
               </a>
-              <a href="/commercial-lenders" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-commercial-lenders">
+              <a href="https://www.willamettevalleybank.com/branch-location/salem" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-commercial-lenders">
                 Commercial Lenders
               </a>
-              <a href="/commercial-lender-centers" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-commercial-lender-centers">
+              <a href="https://www.willamettevalleybank.com/locations" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors text-sm gentle-float" data-testid="link-commercial-lender-centers">
                 Commercial Lender Centers
               </a>
             </div>
