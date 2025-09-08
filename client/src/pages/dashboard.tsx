@@ -141,20 +141,32 @@ export default function Dashboard() {
 
         {/* Quick Actions */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <Button className="flex items-center justify-center h-16 bg-blue-600 hover:bg-blue-700">
-            <Send className="h-5 w-5 mr-2" />
+          <Button 
+            className="flex items-center justify-center h-20 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
+            data-testid="button-transfer"
+          >
+            <Send className="h-6 w-6 mr-3" />
             Transfer Money
           </Button>
-          <Button className="flex items-center justify-center h-16 bg-green-600 hover:bg-green-700">
-            <Plus className="h-5 w-5 mr-2" />
+          <Button 
+            className="flex items-center justify-center h-20 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
+            data-testid="button-deposit"
+          >
+            <Plus className="h-6 w-6 mr-3" />
             Deposit Check
           </Button>
-          <Button className="flex items-center justify-center h-16 bg-purple-600 hover:bg-purple-700">
-            <CreditCard className="h-5 w-5 mr-2" />
+          <Button 
+            className="flex items-center justify-center h-20 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
+            data-testid="button-pay-bills"
+          >
+            <CreditCard className="h-6 w-6 mr-3" />
             Pay Bills
           </Button>
-          <Button className="flex items-center justify-center h-16 bg-gray-600 hover:bg-gray-700">
-            <Settings className="h-5 w-5 mr-2" />
+          <Button 
+            className="flex items-center justify-center h-20 bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 text-white font-semibold text-base"
+            data-testid="button-settings"
+          >
+            <Settings className="h-6 w-6 mr-3" />
             Account Settings
           </Button>
         </div>
