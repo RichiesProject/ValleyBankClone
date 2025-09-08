@@ -28,7 +28,7 @@ export default function HeroSection() {
           {/* Far left - Person with winter hat in forest */}
           <div className="absolute left-0 top-16 w-24 h-80 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
             <img 
-              src="@assets/Screenshot 2025-09-07 at 8.37.19 PM_1757291857050.png" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
               alt="Person with winter hat looking up in forest" 
               className="w-full h-full object-cover"
               data-testid="img-winter-person"
@@ -38,7 +38,7 @@ export default function HeroSection() {
           {/* Left top - Beach scene with person and dog */}
           <div className="absolute left-32 top-0 w-64 h-48 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="@assets/Screenshot 2025-09-07 at 8.38.19 PM_1757291928305.png" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4682ce3e6238b171d64_AdobeStock_555122175.webp" 
               alt="Person running on beach with dog at sunset" 
               className="w-full h-full object-cover"
               data-testid="img-beach-scene"
@@ -48,7 +48,7 @@ export default function HeroSection() {
           {/* Left bottom - Happy family with child in blue */}
           <div className="absolute left-32 bottom-16 w-64 h-64 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
-              src="@assets/Screenshot 2025-09-07 at 8.39.36 PM_1757291984494.png" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
               alt="Happy family with child in blue checkered dress" 
               className="w-full h-full object-cover"
               data-testid="img-family-child"
