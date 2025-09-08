@@ -1,5 +1,3 @@
-// Real Willamette Valley Bank images from their website
-
 export default function HeroSection() {
   return (
     <section className="bg-slate-800 text-white py-16 relative overflow-hidden" data-testid="hero-section">
@@ -25,39 +23,39 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Large Image Mosaic Layout */}
+        {/* Large Image Mosaic Layout - Matching Bank's Website Exactly */}
         <div className="relative h-[500px] lg:h-[600px]">
-          {/* Far left - Person with skis in winter */}
+          {/* Far left - Kitchen/interior scene */}
           <div className="absolute left-0 top-16 w-24 h-80 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
-              alt="Person with skis in winter forest" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
+              alt="Interior kitchen scene" 
               className="w-full h-full object-cover"
-              data-testid="img-winter-skier"
+              data-testid="img-left-interior"
             />
           </div>
 
-          {/* Left top - Beach scene with person and dog */}
+          {/* Left top - Couple with moving boxes */}
           <div className="absolute left-32 top-0 w-64 h-48 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4682ce3e6238b171d64_AdobeStock_555122175.webp" 
-              alt="Person running on beach with dog" 
+              alt="Couple with moving boxes" 
               className="w-full h-full object-cover"
-              data-testid="img-beach-scene"
+              data-testid="img-couple-boxes"
             />
           </div>
 
-          {/* Left bottom - Family with child in blue */}
+          {/* Left bottom - Family cooking together */}
           <div className="absolute left-32 bottom-16 w-64 h-64 rounded-lg overflow-hidden shadow-lg z-20">
             <img 
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
-              alt="Happy family with child in blue" 
+              alt="Family cooking together" 
               className="w-full h-full object-cover"
-              data-testid="img-family-child"
+              data-testid="img-family-cooking"
             />
           </div>
 
-          {/* Large center mountain scene - Made even larger */}
+          {/* Large center mountain scene */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 w-[450px] h-[450px] rounded-lg overflow-hidden shadow-xl z-30">
             <img 
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4673d186da199502445_AdobeStock_341134694.webp" 
@@ -83,17 +81,17 @@ export default function HeroSection() {
               src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4670c6cbb7e6146527b_AdobeStock_418984784.webp" 
               alt="Family cooking together in kitchen" 
               className="w-full h-full object-cover"
-              data-testid="img-kitchen-scene"
+              data-testid="img-family-cooking-right"
             />
           </div>
 
-          {/* Far right - Waterfall scene */}
+          {/* Far right - Couple at scenic location */}
           <div className="absolute right-0 top-16 w-24 h-80 rounded-lg overflow-hidden shadow-lg opacity-90 z-10">
             <img 
-              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/653ee4682ce3e6238b171d64_AdobeStock_555122175.webp" 
-              alt="Waterfall in forest" 
+              src="https://cdn.prod.website-files.com/652866cb9396994a56ed17f2/66b9d07c37f26e549c64b2aa_66b64d085e84150bd3a56016_IMG_4636.jpg" 
+              alt="Couple at scenic location" 
               className="w-full h-full object-cover"
-              data-testid="img-waterfall-scene"
+              data-testid="img-couple-scenic"
             />
           </div>
         </div>
