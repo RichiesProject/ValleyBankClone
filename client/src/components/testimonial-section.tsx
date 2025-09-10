@@ -52,7 +52,7 @@ export default function TestimonialSection() {
               <p className="text-xl font-bold text-gray-600 uppercase tracking-wide mb-4" data-testid="text-award-years">
                 4 YEARS IN A ROW 2019-2022
               </p>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6" data-testid="text-award-title">
+              <h1 className="text-5xl lg:text-6xl font-bold font-serif text-gray-900 leading-tight mb-6" data-testid="text-award-title">
                 <span className="text-4xl lg:text-5xl text-gray-600">#1</span> Community Bank<br />
                 <span className="block">Nationwide</span>
               </h1>

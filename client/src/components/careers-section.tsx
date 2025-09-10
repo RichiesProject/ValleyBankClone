@@ -8,7 +8,7 @@ export default function CareersSection() {
           <div className="text-sm font-medium" data-testid="text-careers-subtitle">
             Join our team
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold" data-testid="text-careers-title">
+          <h2 className="text-3xl lg:text-4xl font-bold font-serif" data-testid="text-careers-title">
             We're Expanding Our Family
           </h2>
           <p className="text-lg text-gray-200" data-testid="text-careers-description">

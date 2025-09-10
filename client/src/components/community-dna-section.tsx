@@ -40,7 +40,7 @@ export default function CommunityDnaSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-3xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+          className="text-3xl lg:text-5xl font-bold font-serif text-white mb-6 leading-tight"
           data-testid="text-community-dna-heading"
         >
           Community banking
