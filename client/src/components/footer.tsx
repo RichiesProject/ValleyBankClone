@@ -50,7 +50,7 @@ export default function Footer() {
               <a href="https://www.facebook.com/LiveLendLocal" className="text-gray-300 hover:text-white gentle-float" data-testid="link-facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white gentle-float" data-testid="link-instagram">
+              <a href="https://www.instagram.com/willamettevalleybank" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white gentle-float" data-testid="link-instagram">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="https://www.linkedin.com/company/willamette-valley-bank" className="text-gray-300 hover:text-white gentle-float" data-testid="link-linkedin">
