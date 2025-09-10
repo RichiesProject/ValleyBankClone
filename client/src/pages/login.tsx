@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useToast } from '@/hooks/use-toast';
+import { ArrowLeft } from 'lucide-react';
+import { Link } from 'wouter';
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -34,8 +36,13 @@ export default function Login() {
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
+            {/* Back Button */}
+            <Link href="/" className="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors" data-testid="button-back-home">
+              <ArrowLeft className="w-5 h-5" />
+              <span className="text-sm font-medium">Back to Home</span>
+            </Link>
+            {/* Logo - Centered */}
+            <div className="flex items-center space-x-3 mx-auto">
               {/* Willamette Valley Bank Circular Logo */}
               <div className="w-12 h-12 relative">
                 <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,11 +74,25 @@ export default function Login() {
             </div>
 
             {/* Top Navigation */}
-            <div className="hidden md:flex items-center space-x-1">
-              <a href="https://www.willamettevalleybank.com/contact-us" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" data-testid="button-contact-us">
+            <div className="flex items-center space-x-1">
+              <a 
+                href="https://www.willamettevalleybank.com/contact-us" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" 
+                data-testid="button-contact-us"
+                onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
+              >
                 Contact Us
               </a>
-              <a href="https://www.willamettevalleybank.com/locations" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" data-testid="button-locations">
+              <a 
+                href="https://www.willamettevalleybank.com/locations" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" 
+                data-testid="button-locations"
+                onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
+              >
                 Locations
               </a>
               <button className="px-4 py-2 text-sm text-white bg-gray-900 hover:bg-gray-800 rounded-sm" data-testid="button-log-in-header">
@@ -160,6 +181,7 @@ export default function Login() {
                 rel="noopener noreferrer"
                 className="text-base text-blue-600 hover:text-blue-800 font-normal"
                 data-testid="link-forgot-password"
+                onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
               >
                 Forgot password?
               </a>
@@ -175,6 +197,7 @@ export default function Login() {
                   rel="noopener noreferrer"
                   className="ml-1 text-blue-600 hover:text-blue-800 font-normal"
                   data-testid="link-enroll-now"
+                  onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
                 >
                   Enroll now.
                 </a>
@@ -188,13 +211,76 @@ export default function Login() {
       <footer className="mt-16 bg-gray-200 border-t border-gray-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-wrap justify-start gap-x-6 gap-y-2 text-base mb-6">
-            <a href="https://web15.secureinternetbank.com/PBI_PBI1151/Help/Content/STUB_start.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-help">Help</a>
-            <a href="https://www.willamettevalleybank.com/disclosures/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-privacy-policy">Privacy Policy</a>
-            <a href="https://www.willamettevalleybank.com/disclosures" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-disclosures">Disclosures</a>
-            <a href="https://assets.website-files.com/652866cb9396994a56ed17f2/66997bca77af0e37c4994e0e_eSTATEMENT-AND-ELECTRONIC-DISCLOSURE-AGREEMENT.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-estatement">eStatement Agreement</a>
-            <a href="https://www.willamettevalleybank.com/contact-us" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-contact-us-footer">Contact Us</a>
-            <a href="https://www.willamettevalleybank.com/locations" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-locations-footer">Locations</a>
-            <a href="https://www.willamettevalleybank.com/disclosures/online-access-agreement" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-online-access">Online Access Agreement</a>
+            <a 
+              href="https://web15.secureinternetbank.com/PBI_PBI1151/Help/Content/STUB_start.htm" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:text-blue-800" 
+              data-testid="link-help"
+              onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
+            >
+              Help
+            </a>
+            <a 
+              href="https://www.willamettevalleybank.com/disclosures/privacy-policy" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:text-blue-800" 
+              data-testid="link-privacy-policy"
+              onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
+            >
+              Privacy Policy
+            </a>
+            <a 
+              href="https://www.willamettevalleybank.com/disclosures" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:text-blue-800" 
+              data-testid="link-disclosures"
+              onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
+            >
+              Disclosures
+            </a>
+            <a 
+              href="https://assets.website-files.com/652866cb9396994a56ed17f2/66997bca77af0e37c4994e0e_eSTATEMENT-AND-ELECTRONIC-DISCLOSURE-AGREEMENT.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:text-blue-800" 
+              data-testid="link-estatement"
+              onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
+            >
+              eStatement Agreement
+            </a>
+            <a 
+              href="https://www.willamettevalleybank.com/contact-us" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:text-blue-800" 
+              data-testid="link-contact-us-footer"
+              onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
+            >
+              Contact Us
+            </a>
+            <a 
+              href="https://www.willamettevalleybank.com/locations" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:text-blue-800" 
+              data-testid="link-locations-footer"
+              onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
+            >
+              Locations
+            </a>
+            <a 
+              href="https://www.willamettevalleybank.com/disclosures/online-access-agreement" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-600 hover:text-blue-800" 
+              data-testid="link-online-access"
+              onClick={(e) => { try { window.open(e.currentTarget.href, '_blank', 'noopener,noreferrer'); } catch(err) { console.warn('Link error:', err); } }}
+            >
+              Online Access Agreement
+            </a>
           </div>
           
           <div className="flex flex-col sm:flex-row justify-between items-start text-sm text-gray-700">
