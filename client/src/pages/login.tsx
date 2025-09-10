@@ -188,7 +188,7 @@ export default function Login() {
       <footer className="mt-16 bg-gray-200 border-t border-gray-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-wrap justify-start gap-x-6 gap-y-2 text-base mb-6">
-            <a href="https://www.willamettevalleybank.com/support" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-help">Help</a>
+            <a href="https://web15.secureinternetbank.com/PBI_PBI1151/Help/Content/STUB_start.htm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-help">Help</a>
             <a href="https://www.willamettevalleybank.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-privacy-policy">Privacy Policy</a>
             <a href="https://www.willamettevalleybank.com/disclosures" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-disclosures">Disclosures</a>
             <a href="https://www.willamettevalleybank.com/estatement-agreement" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-estatement">eStatement Agreement</a>
