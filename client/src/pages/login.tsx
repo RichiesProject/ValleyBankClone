@@ -68,12 +68,12 @@ export default function Login() {
 
             {/* Top Navigation */}
             <div className="hidden md:flex items-center space-x-1">
-              <button className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" data-testid="button-contact-us">
+              <a href="https://www.willamettevalleybank.com/contact" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" data-testid="button-contact-us">
                 Contact Us
-              </button>
-              <button className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" data-testid="button-locations">
+              </a>
+              <a href="https://www.willamettevalleybank.com/locations" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" data-testid="button-locations">
                 Locations
-              </button>
+              </a>
               <button className="px-4 py-2 text-sm text-white bg-gray-900 hover:bg-gray-800 rounded-sm" data-testid="button-log-in-header">
                 Log In
               </button>
@@ -111,7 +111,7 @@ export default function Login() {
                   type={showUsername ? "text" : "text"}
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="w-full px-3 py-3 border-2 border-blue-400 rounded-none focus:outline-none focus:border-blue-600 text-base"
+                  className="w-64 px-3 py-2 border-2 border-blue-400 rounded-none focus:outline-none focus:border-blue-600 text-sm"
                   placeholder=""
                   required
                   data-testid="input-username"
@@ -119,7 +119,7 @@ export default function Login() {
                 <button
                   type="button"
                   onClick={() => setShowUsername(!showUsername)}
-                  className="absolute right-3 top-3 text-xs text-blue-600 hover:text-blue-800 font-normal"
+                  className="absolute right-3 top-2 text-xs text-blue-600 hover:text-blue-800 font-normal"
                   data-testid="button-hide-username"
                 >
                   HIDE
@@ -137,7 +137,7 @@ export default function Login() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-3 py-3 border-2 border-gray-300 rounded-none focus:outline-none focus:border-blue-600 text-base"
+                className="w-64 px-3 py-2 border-2 border-gray-300 rounded-none focus:outline-none focus:border-blue-600 text-sm"
                 placeholder=""
                 required
                 data-testid="input-password"
@@ -155,7 +155,9 @@ export default function Login() {
                 {isLoggingIn ? 'Log In' : 'Log In'}
               </button>
               <a 
-                href="#" 
+                href="https://www.willamettevalleybank.com/forgot-password" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-base text-blue-600 hover:text-blue-800 font-normal"
                 data-testid="link-forgot-password"
               >
@@ -168,7 +170,9 @@ export default function Login() {
               <p className="text-base text-gray-700">
                 Not yet enrolled? 
                 <a 
-                  href="#" 
+                  href="https://www.willamettevalleybank.com/enroll" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="ml-1 text-blue-600 hover:text-blue-800 font-normal"
                   data-testid="link-enroll-now"
                 >
@@ -184,13 +188,13 @@ export default function Login() {
       <footer className="mt-16 bg-gray-200 border-t border-gray-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-wrap justify-start gap-x-6 gap-y-2 text-base mb-6">
-            <a href="#" className="text-blue-600 hover:text-blue-800" data-testid="link-help">Help</a>
-            <a href="#" className="text-blue-600 hover:text-blue-800" data-testid="link-privacy-policy">Privacy Policy</a>
-            <a href="#" className="text-blue-600 hover:text-blue-800" data-testid="link-disclosures">Disclosures</a>
-            <a href="#" className="text-blue-600 hover:text-blue-800" data-testid="link-estatement">eStatement Agreement</a>
-            <a href="#" className="text-blue-600 hover:text-blue-800" data-testid="link-contact-us-footer">Contact Us</a>
-            <a href="#" className="text-blue-600 hover:text-blue-800" data-testid="link-locations-footer">Locations</a>
-            <a href="#" className="text-blue-600 hover:text-blue-800" data-testid="link-online-access">Online Access Agreement</a>
+            <a href="https://www.willamettevalleybank.com/support" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-help">Help</a>
+            <a href="https://www.willamettevalleybank.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-privacy-policy">Privacy Policy</a>
+            <a href="https://www.willamettevalleybank.com/disclosures" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-disclosures">Disclosures</a>
+            <a href="https://www.willamettevalleybank.com/estatement-agreement" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-estatement">eStatement Agreement</a>
+            <a href="https://www.willamettevalleybank.com/contact" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-contact-us-footer">Contact Us</a>
+            <a href="https://www.willamettevalleybank.com/locations" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-locations-footer">Locations</a>
+            <a href="https://www.willamettevalleybank.com/online-access-agreement" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-online-access">Online Access Agreement</a>
           </div>
           
           <div className="flex flex-col sm:flex-row justify-between items-start text-sm text-gray-700">
