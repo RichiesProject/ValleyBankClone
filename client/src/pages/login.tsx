@@ -192,7 +192,7 @@ export default function Login() {
             <a href="https://www.willamettevalleybank.com/disclosures/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-privacy-policy">Privacy Policy</a>
             <a href="https://www.willamettevalleybank.com/disclosures" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-disclosures">Disclosures</a>
             <a href="https://assets.website-files.com/652866cb9396994a56ed17f2/66997bca77af0e37c4994e0e_eSTATEMENT-AND-ELECTRONIC-DISCLOSURE-AGREEMENT.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-estatement">eStatement Agreement</a>
-            <a href="https://www.willamettevalleybank.com/contact" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-contact-us-footer">Contact Us</a>
+            <a href="https://www.willamettevalleybank.com/contact-us" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-contact-us-footer">Contact Us</a>
             <a href="https://www.willamettevalleybank.com/locations" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-locations-footer">Locations</a>
             <a href="https://www.willamettevalleybank.com/online-access-agreement" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-online-access">Online Access Agreement</a>
           </div>
