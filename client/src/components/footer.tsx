@@ -47,16 +47,16 @@ export default function Footer() {
             </div>
             {/* Social Media Icons */}
             <div className="flex space-x-4 mt-6">
-              <a href="https://www.facebook.com/LiveLendLocal" className="text-gray-300 hover:text-white gentle-float" data-testid="link-facebook">
+              <a href="https://www.facebook.com/LiveLendLocal" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white gentle-float" data-testid="link-facebook">
                 <Facebook className="w-5 h-5" />
               </a>
               <a href="https://www.instagram.com/willamettevalleybank" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white gentle-float" data-testid="link-instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/company/willamette-valley-bank" className="text-gray-300 hover:text-white gentle-float" data-testid="link-linkedin">
+              <a href="https://www.linkedin.com/company/willamette-valley-bank" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white gentle-float" data-testid="link-linkedin">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.zillow.com/lender-profile/WVBKhomeloans/" className="text-gray-300 hover:text-white gentle-float" data-testid="link-zillow">
+              <a href="https://www.zillow.com/lender-profile/WVBKhomeloans/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white gentle-float" data-testid="link-zillow">
                 <Home className="w-5 h-5" />
               </a>
             </div>
