@@ -68,7 +68,7 @@ export default function Login() {
 
             {/* Top Navigation */}
             <div className="hidden md:flex items-center space-x-1">
-              <a href="https://www.willamettevalleybank.com/contact" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" data-testid="button-contact-us">
+              <a href="https://www.willamettevalleybank.com/contact-us" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" data-testid="button-contact-us">
                 Contact Us
               </a>
               <a href="https://www.willamettevalleybank.com/locations" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-sm text-white bg-gray-700 hover:bg-gray-600 rounded-sm" data-testid="button-locations">
@@ -194,7 +194,7 @@ export default function Login() {
             <a href="https://assets.website-files.com/652866cb9396994a56ed17f2/66997bca77af0e37c4994e0e_eSTATEMENT-AND-ELECTRONIC-DISCLOSURE-AGREEMENT.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-estatement">eStatement Agreement</a>
             <a href="https://www.willamettevalleybank.com/contact-us" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-contact-us-footer">Contact Us</a>
             <a href="https://www.willamettevalleybank.com/locations" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-locations-footer">Locations</a>
-            <a href="https://www.willamettevalleybank.com/online-access-agreement" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-online-access">Online Access Agreement</a>
+            <a href="https://www.willamettevalleybank.com/disclosures/online-access-agreement" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800" data-testid="link-online-access">Online Access Agreement</a>
           </div>
           
           <div className="flex flex-col sm:flex-row justify-between items-start text-sm text-gray-700">
